@@ -29,7 +29,7 @@ Nunca se almacena la contraseña en texto plano en el código fuente.
 
 ## 🛠 Características
 
-- ✅ 248 tiendas de la plaza Tijuana Centro — Correos
+- ✅ 248 tiendas de la plaza Tijuana Centro
 - ✅ 5 ingenieros con zonas geográficas optimizadas
 - ✅ 10 días consecutivos (6–15 marzo 2026, incl. fines de semana)
 - ✅ ~5 tiendas por ingeniero por día (carga equilibrada)
