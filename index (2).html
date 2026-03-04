@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Auditoría TI · Tijuana Centro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0F172A;--bg2:#1E293B;--bg3:#293548;--bg4:#334155;
+  --border:#334155;--border2:#475569;
+  --text:#F1F5F9;--text2:#94A3B8;--text3:#64748B;
+  --card:#1E293B;--card2:#243044;
+  --e1:#3B82F6;--e1b:#1D4ED8;--e1l:#1e3a5f;
+  --e2:#10B981;--e2b:#059669;--e2l:#064e3b;
+  --e3:#EF4444;--e3b:#DC2626;--e3l:#7f1d1d;
+  --e4:#A855F7;--e4b:#9333EA;--e4l:#4c1d95;
+  --e5:#F59E0B;--e5b:#D97706;--e5l:#78350f;
+  --e6:#EC4899;--e6b:#DB2777;--e6l:#831843;
+  --e7:#06B6D4;--e7b:#0891B2;--e7l:#164e63;
+  --e8:#84CC16;--e8b:#65A30D;--e8l:#365314;
+  --radius:10px;--radius-lg:14px;
+  --font:'Plus Jakarta Sans',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --header:60px;--sidebar:270px;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.2);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.4);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--text);
+  display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px}
+
+/* ── HEADER ── */
+#hdr{height:var(--header);background:var(--bg2);border-bottom:1px solid var(--border);
+  display:flex;align-items:center;padding:0 20px;gap:14px;flex-shrink:0;
+  box-shadow:0 1px 8px rgba(0,0,0,.3);z-index:100;position:relative}
+.hdr-logo{width:34px;height:34px;background:var(--e1);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hdr-title{flex:1}
+.hdr-title h1{font-size:15px;font-weight:800;letter-spacing:-.3px;color:var(--text)}
+.hdr-title p{font-size:11px;color:var(--text3);margin-top:1px}
+.hdr-btns{display:flex;gap:8px;align-items:center}
+.hbtn{display:flex;align-items:center;gap:5px;padding:7px 13px;border-radius:8px;
+  border:1px solid var(--border2);background:var(--bg3);font-family:var(--font);
+  font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;
+  transition:all .15s;white-space:nowrap}
+.hbtn:hover{background:var(--bg4);color:var(--text);border-color:var(--border2)}
+.hbtn.accent{background:var(--e1b);color:#fff;border-color:var(--e1b)}
+.hbtn.accent:hover{background:var(--e1)}
+#live-pill{display:none;align-items:center;gap:5px;padding:5px 10px;
+  background:#064e3b;border:1px solid #10B981;border-radius:20px;
+  font-size:11px;font-weight:700;color:#10B981}
+#live-pill .pulse{width:7px;height:7px;border-radius:50%;background:#10B981;
+  animation:pls 2s infinite}
+@keyframes pls{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+#menu-btn{display:none;width:32px;height:32px;border:1px solid var(--border);
+  background:var(--bg3);border-radius:8px;cursor:pointer;color:var(--text2);
+  align-items:center;justify-content:center}
+
+/* ── LAYOUT ── */
+#body{flex:1;display:flex;overflow:hidden}
+
+/* ── SIDEBAR ── */
+#sb{width:var(--sidebar);background:var(--bg2);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;flex-shrink:0;overflow:hidden}
+#sb-scroll{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:4px}
+.sb-section{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--text3);padding:8px 8px 4px;margin-top:4px}
+.eng-item{display:flex;align-items:center;gap:10px;padding:10px 12px;
+  border-radius:9px;cursor:pointer;border:1px solid transparent;transition:all .15s}
+.eng-item:hover{background:var(--bg3);border-color:var(--border)}
+.eng-item.active{background:var(--bg3);border-color:var(--border2)}
+.eng-av{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;
+  justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.eng-info{flex:1;min-width:0}
+.eng-name{font-size:13.5px;font-weight:700;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eng-sub{font-size:11px;color:var(--text3);margin-top:1px}
+.eng-badge{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:800;flex-shrink:0}
+
+/* day bar */
+#day-bar{padding:10px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px}
+#day-bar .dbar-label{font-size:10px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;color:var(--text3);padding:0 2px}
+#day-chips{display:flex;flex-wrap:wrap;gap:5px}
+.dchip{padding:5px 10px;border-radius:7px;border:1.5px solid var(--border);
+  background:transparent;font-family:var(--font);font-size:11px;font-weight:600;
+  color:var(--text3);cursor:pointer;transition:all .15s;line-height:1.2}
+.dchip:hover{background:var(--bg3);border-color:var(--border2);color:var(--text)}
+.dchip.active{color:#fff;border-color:transparent}
+.dchip.weekend{border-style:dashed}
+.dchip .dchip-date{display:block;font-size:9.5px;opacity:.7;margin-top:1px}
+.dchip.nodata{opacity:.35;cursor:not-allowed}
+
+/* ── MAIN ── */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#main-scroll{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px}
+
+/* ── ROUTE HEADER ── */
+#rh{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:18px 22px;display:none}
+.rh-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rh-title{font-size:19px;font-weight:800;letter-spacing:-.4px}
+.rh-sub{font-size:12px;color:var(--text3);margin-top:4px}
+.rh-acts{display:flex;gap:8px;flex-wrap:wrap}
+.maps-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 15px;
+  background:#4285F4;color:#fff;border-radius:8px;font-weight:600;font-size:12.5px;
+  text-decoration:none;border:none;cursor:pointer;transition:background .15s}
+.maps-btn:hover{background:#3367D6}
+.ref-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;
+  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;
+  transition:all .15s;font-family:var(--font)}
+.ref-btn:hover{background:var(--bg4);color:var(--text)}
+.ref-btn.spin svg{animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#rh-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kpi-val{font-size:21px;font-weight:800;letter-spacing:-.5px}
+.kpi-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--text3)}
+.we-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;
+  background:#78350f;border:1px solid var(--e5b);border-radius:10px;
+  font-size:10.5px;font-weight:700;color:var(--e5);margin-left:8px}
+
+/* ── TABLE ── */
+#tw{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);
+  overflow:hidden;display:none}
+.tw-head{display:flex;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);gap:10px}
+.tw-head h3{font-size:13.5px;font-weight:700;flex:1}
+#api-st{font-size:11px;font-weight:700;padding:4px 9px;border-radius:6px}
+#api-st.live{background:#064e3b;color:#10B981}
+#api-st.est{background:#1c1917;color:var(--e5)}
+#api-st.loading{background:#1e3a5f;color:var(--e1)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--bg3)}
+th{padding:9px 13px;text-align:left;font-size:10.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.8px;color:var(--text3);
+  border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:10px 13px;font-size:13px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.025)}
+.td-num{font-family:var(--mono);font-size:11.5px;color:var(--text3);width:32px}
+.td-cr{font-family:var(--mono);font-size:11.5px;padding:2px 7px;border-radius:5px;
+  background:var(--bg3);display:inline-block;color:var(--text2)}
+.td-nm{font-weight:600}
+.td-t{font-family:var(--mono);font-size:13px;font-weight:500}
+.pill{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;
+  border-radius:6px;font-size:11.5px;font-weight:700;font-family:var(--mono)}
+.pill.g{background:#064e3b;color:#10B981}
+.pill.y{background:#78350f;color:#F59E0B}
+.pill.r{background:#7f1d1d;color:#EF4444}
+.pill.n{background:var(--bg3);color:var(--text3)}
+.td-co{font-family:var(--mono);font-size:10px;color:var(--text3);white-space:nowrap}
+.td-pin a{display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:7px;background:var(--bg3);color:var(--text3);
+  transition:all .15s;text-decoration:none}
+.td-pin a:hover{background:var(--e1b);color:#fff}
+
+/* ── EMPTY ── */
+#empty{display:none;flex-direction:column;align-items:center;justify-content:center;
+  min-height:340px;gap:10px;color:var(--text3)}
+#empty .ei{font-size:52px;opacity:.2}
+#empty h3{font-size:18px;font-weight:800;color:var(--text2)}
+#empty p{font-size:13px;max-width:280px;text-align:center;line-height:1.6}
+
+/* ── OVERLAYS & MODALS ── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;
+  display:flex;align-items:center;justify-content:center;padding:16px;
+  backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .2s}
+.overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--bg2);border:1px solid var(--border2);
+  border-radius:var(--radius-lg);width:100%;box-shadow:var(--shadow-lg);
+  transform:translateY(10px) scale(.98);transition:transform .2s;overflow:hidden}
+.overlay.open .modal{transform:none}
+.mh{padding:18px 22px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between}
+.mh h2{font-size:16px;font-weight:800;letter-spacing:-.3px}
+.mclose{width:28px;height:28px;border:1px solid var(--border);background:var(--bg3);
+  border-radius:7px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:var(--text3);transition:all .15s}
+.mclose:hover{background:var(--bg4);color:var(--text)}
+.mb{padding:20px 22px}
+.mf{padding:14px 22px;border-top:1px solid var(--border);
+  display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+
+/* ── FORMS ── */
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--text3);margin-bottom:5px}
+.fg input,.fg select{width:100%;padding:9px 12px;border:1.5px solid var(--border2);
+  border-radius:8px;background:var(--bg3);color:var(--text);font-family:var(--font);
+  font-size:13.5px;transition:border-color .15s;outline:none}
+.fg input:focus,.fg select:focus{border-color:var(--e1);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.fg select option{background:var(--bg2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* ── BUTTONS ── */
+.btn{padding:8px 16px;border-radius:8px;border:1.5px solid;font-family:var(--font);
+  font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;display:inline-flex;
+  align-items:center;gap:5px}
+.btn-p{background:var(--e1b);color:#fff;border-color:var(--e1b)}
+.btn-p:hover{background:var(--e1)}
+.btn-s{background:var(--bg3);color:var(--text2);border-color:var(--border2)}
+.btn-s:hover{background:var(--bg4);color:var(--text)}
+.btn-d{background:#7f1d1d;color:#FCA5A5;border-color:#DC2626}
+.btn-d:hover{background:#991b1b}
+.btn-w{background:#78350f;color:#FDE68A;border-color:#F59E0B}
+.btn-w:hover{background:#92400e}
+.btn-g{background:#064e3b;color:#6EE7B7;border-color:#10B981}
+.btn-g:hover{background:#065f46}
+.alert{padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:500;margin-bottom:12px}
+.alert-e{background:#7f1d1d;color:#FCA5A5;border:1px solid #DC2626}
+.alert-s{background:#064e3b;color:#6EE7B7;border:1px solid #10B981}
+.alert-i{background:#1e3a5f;color:#93C5FD;border:1px solid var(--e1b)}
+
+/* ── ADMIN MODAL ── */
+.eng-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;
+  background:var(--bg3);padding:10px 12px;border-radius:9px;border:1px solid var(--border)}
+.eng-row .eng-av-sm{width:28px;height:28px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.eng-row input{flex:1;min-width:0;padding:7px 10px;border:1.5px solid var(--border2);
+  border-radius:7px;background:var(--bg2);color:var(--text);font-family:var(--font);
+  font-size:13px;outline:none}
+.eng-row input:focus{border-color:var(--e1);box-shadow:0 0 0 2px rgba(59,130,246,.1)}
+.eng-row .del-btn{width:28px;height:28px;border:1px solid #DC2626;background:#7f1d1d;
+  border-radius:7px;color:#FCA5A5;cursor:pointer;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;transition:all .15s}
+.eng-row .del-btn:hover{background:#991b1b}
+.eng-row .load-inp{width:54px;flex-shrink:0;padding:7px 8px;text-align:center;
+  border:1.5px solid var(--border2);border-radius:7px;background:var(--bg2);
+  color:var(--text);font-family:var(--mono);font-size:13px;outline:none}
+.eng-row .load-inp:focus{border-color:var(--e1)}
+.row-labels{display:flex;gap:8px;margin-bottom:4px;padding:0 12px}
+.rl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text3)}
+.add-eng-btn{display:flex;align-items:center;justify-content:center;gap:6px;
+  width:100%;padding:9px;border:1.5px dashed var(--border2);border-radius:9px;
+  background:transparent;color:var(--text3);font-family:var(--font);font-size:13px;
+  font-weight:600;cursor:pointer;transition:all .15s;margin-top:6px}
+.add-eng-btn:hover{background:var(--bg3);color:var(--text);border-color:var(--border2)}
+.config-section{margin-bottom:18px}
+.config-section h4{font-size:12px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.8px;color:var(--text3);margin-bottom:10px;
+  padding-bottom:6px;border-bottom:1px solid var(--border)}
+.recalc-note{background:#1e3a5f;border:1px solid var(--e1b);border-radius:8px;
+  padding:10px 13px;font-size:12px;color:#93C5FD;margin-top:14px;line-height:1.6}
+.recalc-note strong{color:#BFDBFE}
+
+/* ── API MODAL ── */
+.api-note{background:var(--bg3);border-radius:8px;padding:11px 13px;
+  font-size:12px;color:var(--text3);margin-top:10px;line-height:1.6}
+.api-note code{font-family:var(--mono);background:var(--bg4);
+  padding:1px 5px;border-radius:4px;font-size:11px;color:var(--text)}
+
+/* ── PROGRESS OVERLAY ── */
+#calc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;backdrop-filter:blur(6px)}
+#calc-overlay.show{display:flex}
+.calc-box{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);
+  padding:32px 40px;text-align:center;max-width:360px}
+.calc-box h3{font-size:16px;font-weight:800;margin-bottom:6px}
+.calc-box p{font-size:13px;color:var(--text3);margin-bottom:18px}
+.prog-bar{height:4px;background:var(--bg4);border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;background:var(--e1);border-radius:2px;
+  transition:width .3s;width:0%}
+#calc-step{font-size:11.5px;color:var(--text3);margin-top:8px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  :root{--sidebar:270px}
+  #sb{position:fixed;left:0;top:var(--header);bottom:0;z-index:90;
+    transform:translateX(-100%);transition:transform .25s}
+  #sb.open{transform:none}
+  #sbov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:85;display:none}
+  #sbov.open{display:block}
+  #menu-btn{display:flex}
+  #main-scroll{padding:12px}
+  .td-co,.td-pin{display:none}
+  #rh-kpis{grid-template-columns:repeat(2,1fr)}
+  .rh-title{font-size:16px}
+  .row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- CALC PROGRESS -->
+<div id="calc-overlay">
+  <div class="calc-box">
+    <h3>Recalculando rutas...</h3>
+    <p id="calc-msg">Distribuyendo tiendas geográficamente</p>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill"></div></div>
+    <div id="calc-step"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <button id="menu-btn" onclick="toggleSB()" aria-label="Menú">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div class="hdr-logo">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+  </div>
+  <div class="hdr-title">
+    <h1>Auditoría Activo Fijo TI</h1>
+    <p id="hdr-sub">Tijuana Centro · Correos · cargando...</p>
+  </div>
+  <div class="hdr-btns">
+    <div id="live-pill"><span class="pulse"></span>Tiempo real</div>
+    <button class="hbtn" onclick="openApiModal()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M4 12H2M22 12h-2M19.07 19.07l-1.41-1.41M6.34 6.34L4.93 4.93M12 2v2M12 20v2"/></svg>
+      API Maps
+    </button>
+    <button class="hbtn accent" onclick="openAdminModal()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 15c-2.21 0-4-1.79-4-4V6a4 4 0 018 0v5c0 2.21-1.79 4-4 4z"/><path d="M19 21H5a2 2 0 01-2-2v-1a7 7 0 0114 0v1a2 2 0 01-2 2z"/></svg>
+      Admin
+    </button>
+  </div>
+</header>
+
+<!-- BODY -->
+<div id="body">
+  <!-- SIDEBAR OVERLAY MOBILE -->
+  <div id="sbov" onclick="closeSB()"></div>
+
+  <!-- SIDEBAR -->
+  <nav id="sb">
+    <div id="sb-scroll">
+      <div class="sb-section">Ingenieros</div>
+      <div id="eng-list"></div>
+    </div>
+    <div id="day-bar">
+      <div class="dbar-label">Días del plan</div>
+      <div id="day-chips"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main">
+    <div id="main-scroll">
+      <!-- Route header -->
+      <div id="rh">
+        <div class="rh-top">
+          <div>
+            <div class="rh-title" id="rh-title">—</div>
+            <div class="rh-sub" id="rh-sub">—</div>
+          </div>
+          <div class="rh-acts">
+            <button class="ref-btn" id="ref-btn" onclick="refreshTimes()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              Actualizar tiempos
+            </button>
+            <a id="maps-link" href="#" target="_blank" class="maps-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver Ruta en Maps
+            </a>
+          </div>
+        </div>
+        <div id="rh-kpis">
+          <div class="kpi"><span class="kpi-val" id="k-stores">—</span><span class="kpi-lbl">Tiendas</span></div>
+          <div class="kpi"><span class="kpi-val" id="k-start">08:00</span><span class="kpi-lbl">Inicio</span></div>
+          <div class="kpi"><span class="kpi-val" id="k-end">—</span><span class="kpi-lbl">Fin estimado</span></div>
+          <div class="kpi"><span class="kpi-val" id="k-total">—</span><span class="kpi-lbl">Tiempo total</span></div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div id="tw">
+        <div class="tw-head">
+          <h3>Itinerario del Día</h3>
+          <span id="api-st" class="est">⏱ Estimado</span>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr>
+              <th class="td-num">#</th>
+              <th>CR</th>
+              <th>Tienda</th>
+              <th>Llegada</th>
+              <th>Salida</th>
+              <th>Viaje a siguiente</th>
+              <th class="td-co">Coordenadas</th>
+              <th class="td-pin"></th>
+            </tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Empty -->
+      <div id="empty" style="display:flex">
+        <div class="ei">🗺️</div>
+        <h3>Selecciona un ingeniero</h3>
+        <p>Elige un ingeniero del panel lateral y el día para ver su ruta de auditorías.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ══ MODALS ═════════════════════════════════════ -->
+
+<!-- LOGIN -->
+<div class="overlay" id="login-ov" onclick="bgClose(event,'login-ov')">
+  <div class="modal" style="max-width:420px">
+    <div class="mh"><h2>🔐 Panel Administrador</h2>
+      <button class="mclose" onclick="closeM('login-ov')">✕</button></div>
+    <div class="mb">
+      <div id="login-alert" style="display:none"></div>
+      <div class="fg"><label>Usuario</label>
+        <input type="text" id="li-u" placeholder="Usuario" autocomplete="username"/></div>
+      <div class="fg"><label>Contraseña</label>
+        <input type="password" id="li-p" placeholder="Contraseña"
+          onkeydown="if(event.key==='Enter')doLogin()"/></div>
+    </div>
+    <div class="mf">
+      <button class="btn btn-s" onclick="closeM('login-ov')">Cancelar</button>
+      <button class="btn btn-p" onclick="doLogin()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Ingresar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class="overlay" id="admin-ov" onclick="bgClose(event,'admin-ov')">
+  <div class="modal" style="max-width:580px;max-height:92vh;display:flex;flex-direction:column">
+    <div class="mh"><h2>⚙️ Configuración del Plan</h2>
+      <button class="mclose" onclick="closeM('admin-ov')">✕</button></div>
+    <div class="mb" style="overflow-y:auto;flex:1">
+
+      <!-- Fecha inicio -->
+      <div class="config-section">
+        <h4>📅 Fecha de inicio</h4>
+        <div class="row2">
+          <div class="fg">
+            <label>Fecha de inicio</label>
+            <input type="date" id="cfg-date"/>
+          </div>
+          <div class="fg">
+            <label>Total de días del plan</label>
+            <input type="number" id="cfg-days" min="1" max="60" value="10"
+              placeholder="ej. 10"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ingenieros -->
+      <div class="config-section">
+        <h4>👷 Ingenieros y carga diaria</h4>
+        <div class="row-labels">
+          <div class="rl" style="flex:1;margin-left:36px">Nombre</div>
+          <div class="rl" style="width:54px;text-align:center">Tiendas/día</div>
+          <div class="rl" style="width:28px"></div>
+        </div>
+        <div id="adm-eng-list"></div>
+        <button class="add-eng-btn" onclick="addEng()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          Agregar ingeniero
+        </button>
+      </div>
+
+      <div class="recalc-note">
+        <strong>ℹ️ Al guardar</strong>, el sistema redistribuirá automáticamente las 
+        <strong>248 tiendas</strong> entre los ingenieros configurados, optimizará las 
+        rutas por día respetando la carga diaria de cada uno, y actualizará todo el plan.
+      </div>
+    </div>
+    <div class="mf" style="flex-wrap:wrap">
+      <button class="btn btn-d" onclick="adminLogout()">Cerrar sesión</button>
+      <button class="btn btn-s" onclick="closeM('admin-ov')">Cancelar</button>
+      <button class="btn btn-p" onclick="saveAndRecalc()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Guardar y Recalcular
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- API KEY -->
+<div class="overlay" id="api-ov" onclick="bgClose(event,'api-ov')">
+  <div class="modal" style="max-width:500px">
+    <div class="mh"><h2>🗺️ Google Maps API</h2>
+      <button class="mclose" onclick="closeM('api-ov')">✕</button></div>
+    <div class="mb">
+      <div class="fg"><label>API Key</label>
+        <input type="text" id="api-inp" placeholder="AIza..."
+          style="font-family:var(--mono);font-size:12.5px"/></div>
+      <div class="api-note">
+        Requiere <code>Maps JavaScript API</code> + <code>Distance Matrix API</code>.<br/>
+        La clave se guarda localmente en tu navegador y nunca se transmite a servidores externos.<br/>
+        Sin clave, la app usa tiempos estimados (velocidad urbana ~25 km/h).
+      </div>
+    </div>
+    <div class="mf">
+      <button class="btn btn-d" onclick="clearApi()">Eliminar clave</button>
+      <button class="btn btn-s" onclick="closeM('api-ov')">Cancelar</button>
+      <button class="btn btn-p" onclick="saveApi()">Guardar y activar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   RAW STORE DATA
+══════════════════════════════════════════════════════ */
+const ALL_STORES = [{"cr": "50279", "name": "Las Joyas", "lat": 32.506918, "lng": -116.950158}, {"cr": "500AE", "name": "Jacobo TIJ", "lat": 32.497768, "lng": -116.97919}, {"cr": "5016V", "name": "Aquiles TIJ", "lat": 32.538446, "lng": -117.01691}, {"cr": "501QZ", "name": "Sentri TIJ", "lat": 32.536731, "lng": -117.018473}, {"cr": "501TS", "name": "Ganimides", "lat": 32.457018, "lng": -116.973106}, {"cr": "501ZP", "name": "Ejidatarios TIJ", "lat": 32.535969, "lng": -116.901551}, {"cr": "5022L", "name": "Durazno TIJ", "lat": 32.490107, "lng": -116.947019}, {"cr": "502M3", "name": "Flor TIJ", "lat": 32.449414, "lng": -116.918931}, {"cr": "5031P", "name": "Diaz TIJ", "lat": 32.48243, "lng": -116.938255}, {"cr": "5035A", "name": "Diez de Mayo", "lat": 32.537713, "lng": -116.893351}, {"cr": "5035K", "name": "Olivares TIJ", "lat": 32.48658, "lng": -116.947519}, {"cr": "503HT", "name": "Felix Gomez", "lat": 32.53661, "lng": -117.012108}, {"cr": "5040U", "name": "Mesa TIJ", "lat": 32.464365, "lng": -116.932777}, {"cr": "5045A", "name": "Coloso TIJ", "lat": 32.526196, "lng": -116.916717}, {"cr": "5046F", "name": "Lomas de la Presa TIJ", "lat": 32.445518, "lng": -116.927908}, {"cr": "5048W", "name": "De la Plata TIJ", "lat": 32.513586, "lng": -116.903235}, {"cr": "504MX", "name": "Jardines de la Mesa", "lat": 32.46007, "lng": -116.932204}, {"cr": "504SI", "name": "Emma TIJ", "lat": 32.539071, "lng": -116.998815}, {"cr": "504YH", "name": "Parker TIJ", "lat": 32.541542, "lng": -116.918561}, {"cr": "5053O", "name": "Compuertas TIJ", "lat": 32.514174, "lng": -116.992788}, {"cr": "505HE", "name": "Uxmal TIJ", "lat": 32.519816, "lng": -116.97863}, {"cr": "505OC", "name": "Tamul TIJ", "lat": 32.525656, "lng": -116.923305}, {"cr": "505UD", "name": "Evaristo TIJ", "lat": 32.527257, "lng": -117.000092}, {"cr": "506NK", "name": "Aquila TIJ", "lat": 32.439475, "lng": -116.922772}, {"cr": "5076L", "name": "Pericue TIJ", "lat": 32.449316, "lng": -116.909474}, {"cr": "507YY", "name": "Vibora TIJ", "lat": 32.446037, "lng": -116.924031}, {"cr": "50820", "name": "Rinconada OTAY TIJ", "lat": 32.525541, "lng": -116.942387}, {"cr": "5085K", "name": "Santa Isabel TIJ", "lat": 32.51984, "lng": -116.990598}, {"cr": "508JO", "name": "Rancho Viejo TIJ", "lat": 32.472289, "lng": -116.934511}, {"cr": "5090I", "name": "Olachea TIJ", "lat": 32.520809, "lng": -116.942192}, {"cr": "509GF", "name": "Y Griega TIJ", "lat": 32.411282, "lng": -116.950361}, {"cr": "509L5", "name": "Marsella TIJ", "lat": 32.514575, "lng": -116.915425}, {"cr": "509TO", "name": "Taurinas TIJ", "lat": 32.533406, "lng": -116.982041}, {"cr": "509Y0", "name": "Carlota TIJ", "lat": 32.530778, "lng": -116.992996}, {"cr": "50ABI", "name": "Alta Brisa II TIJ", "lat": 32.530478, "lng": -116.977294}, {"cr": "50ABR", "name": "Alba Roja TIJ", "lat": 32.497167, "lng": -116.983781}, {"cr": "50ALI", "name": "California TIJ", "lat": 32.541321, "lng": -116.997846}, {"cr": "50ALS", "name": "Alamos TIJ", "lat": 32.509667, "lng": -116.953331}, {"cr": "50AM3", "name": "Morse TIJ", "lat": 32.474271, "lng": -116.94707}, {"cr": "50ATV", "name": "Alta Brisa TIJ", "lat": 32.530208, "lng": -116.970824}, {"cr": "50B5O", "name": "Dorian TIJ", "lat": 32.53426, "lng": -117.004646}, {"cr": "50BAT", "name": "Bellas Artes TIJ", "lat": 32.54377, "lng": -116.933}, {"cr": "50BJX", "name": "Velasco TIJ", "lat": 32.540009, "lng": -117.003215}, {"cr": "50C8R", "name": "Asadero TIJ", "lat": 32.50963, "lng": -116.912142}, {"cr": "50CFT", "name": "Comonfort TIJ", "lat": 32.491839, "lng": -116.908704}, {"cr": "50CKO", "name": "Buena Vista TIJ", "lat": 32.521381, "lng": -116.986889}, {"cr": "50CM0", "name": "Club Campestre TIJ", "lat": 32.512886, "lng": -117.001486}, {"cr": "50CNO", "name": "Juan Ojeda TIJ", "lat": 32.519521, "lng": -116.982462}, {"cr": "50CQF", "name": "Aviles TIJ", "lat": 32.498224, "lng": -116.967867}, {"cr": "50CWV", "name": "Cordova TIJ", "lat": 32.483919, "lng": -116.931873}, {"cr": "50CZ6", "name": "Berenjenos TIJ", "lat": 32.500838, "lng": -116.969306}, {"cr": "50D0S", "name": "Gran Lago i78", "lat": 32.510213, "lng": -116.932006}, {"cr": "50D7T", "name": "Terminal Aerea TIJ", "lat": 32.546268, "lng": -116.973185}, {"cr": "50DI8", "name": "Datileros TIJ", "lat": 32.50319, "lng": -116.968646}, {"cr": "50DP7", "name": "Zermeño TIJ", "lat": 32.480427, "lng": -116.935786}, {"cr": "50DQL", "name": "Lomas Verdes TIJ", "lat": 32.472397, "lng": -116.942828}, {"cr": "50DU9", "name": "Vista Sur TIJ", "lat": 32.490323, "lng": -116.944212}, {"cr": "50DUL", "name": "Modulos TIJ", "lat": 32.549214, "lng": -116.92468}, {"cr": "50DXB", "name": "Tequesquitengo TIJ", "lat": 32.511347, "lng": -116.927231}, {"cr": "50DYN", "name": "Romano TIJ", "lat": 32.505018, "lng": -116.97752}, {"cr": "50E06", "name": "General TIJ", "lat": 32.527225, "lng": -117.010191}, {"cr": "50EKA", "name": "Tijuana TIJ", "lat": 32.543114, "lng": -116.939637}, {"cr": "50EKG", "name": "Bolivia TIJ", "lat": 32.493959, "lng": -116.941655}, {"cr": "50EL4", "name": "Selva TIJ", "lat": 32.482786, "lng": -116.965357}, {"cr": "50ERD", "name": "Camino Verde TIJ", "lat": 32.491347, "lng": -116.971455}, {"cr": "50ERR", "name": "Ferrocarril TIJ", "lat": 32.497605, "lng": -116.95428}, {"cr": "50EVA", "name": "Breva TIJ", "lat": 32.480092, "lng": -116.939225}, {"cr": "50EWS", "name": "Campos TIJ", "lat": 32.493633, "lng": -116.93098}, {"cr": "50EWU", "name": "Del Arbusto TIJ", "lat": 32.430989, "lng": -116.945452}, {"cr": "50EZR", "name": "Finisterra TIJ", "lat": 32.491881, "lng": -116.920297}, {"cr": "50EZZ", "name": "San Pablo TIJ", "lat": 32.441592, "lng": -116.932481}, {"cr": "50F08", "name": "Rio Yaqui TIJ", "lat": 32.512209, "lng": -116.944144}, {"cr": "50F5E", "name": "Guillermo Prieto TIJ", "lat": 32.507778, "lng": -116.973253}, {"cr": "50F9X", "name": "Balcones TIJ", "lat": 32.535302, "lng": -116.935379}, {"cr": "50FAL", "name": "Andes TIJ", "lat": 32.420752, "lng": -116.969928}, {"cr": "50FB4", "name": "Conquistadores TIJ", "lat": 32.475344, "lng": -116.968412}, {"cr": "50FTU", "name": "Humbolt TIJ", "lat": 32.541965, "lng": -116.92384}, {"cr": "50FVU", "name": "Madrid TIJ", "lat": 32.539501, "lng": -117.019128}, {"cr": "50FXF", "name": "Santa Elena TIJ", "lat": 32.498048, "lng": -116.987932}, {"cr": "50GBN", "name": "Benton TIJ", "lat": 32.491301, "lng": -116.953539}, {"cr": "50GDT", "name": "Santa Barbara TIJ", "lat": 32.505506, "lng": -116.985094}, {"cr": "50GHH", "name": "Chevigas TIJ", "lat": 32.536865, "lng": -116.903612}, {"cr": "50GHL", "name": "Chilpancingo TIJ", "lat": 32.529876, "lng": -116.900222}, {"cr": "50GHN", "name": "Gran Hotel TIJ", "lat": 32.513118, "lng": -117.006153}, {"cr": "50GHU", "name": "Nayarit TIJ", "lat": 32.463552, "lng": -116.973447}, {"cr": "50GUI", "name": "Aguila TIJ", "lat": 32.498748, "lng": -116.904484}, {"cr": "50GYZ", "name": "Girasol TIJ", "lat": 32.494593, "lng": -116.901579}, {"cr": "50H7H", "name": "Sauco TIJ", "lat": 32.458007, "lng": -116.919121}, {"cr": "50HDO", "name": "Hipodromo TIJ", "lat": 32.503716, "lng": -116.998753}, {"cr": "50HHH", "name": "Lago TIJ", "lat": 32.507837, "lng": -116.926011}, {"cr": "50HI8", "name": "Israelitas", "lat": 32.481217, "lng": -116.944974}, {"cr": "50HRV", "name": "Maritimo TIJ", "lat": 32.489007, "lng": -116.937162}, {"cr": "50HS9", "name": "Moctezuma TIJ", "lat": 32.476405, "lng": -116.973753}, {"cr": "50HTA", "name": "Sanchez Taboada TIJ", "lat": 32.469099, "lng": -116.972714}, {"cr": "50HZM", "name": "Alamar TIJ", "lat": 32.513215, "lng": -116.961295}, {"cr": "50IHX", "name": "Ruiz Cortinez TIJ", "lat": 32.531238, "lng": -117.011852}, {"cr": "50INL", "name": "Industrial TIJ", "lat": 32.537795, "lng": -116.919103}, {"cr": "50ITN", "name": "Insurgentes TIJ", "lat": 32.504822, "lng": -116.952108}, {"cr": "50J1Q", "name": "Mesetas TIJ", "lat": 32.512545, "lng": -116.918207}, {"cr": "50JGQ", "name": "De las Granjas TIJ", "lat": 32.49128, "lng": -116.928851}, {"cr": "50JHF", "name": "Mujica TIJ", "lat": 32.527869, "lng": -116.948075}, {"cr": "50JIE", "name": "Paraiso TIJ", "lat": 32.509031, "lng": -116.986423}, {"cr": "50JLB", "name": "Omega TIJ", "lat": 32.461514, "lng": -116.963404}, {"cr": "50JM1", "name": "Marte TIJ", "lat": 32.462129, "lng": -116.967119}, {"cr": "50JON", "name": "Valle Vista TIJ", "lat": 32.519251, "lng": -116.951667}, {"cr": "50JOW", "name": "Siete TIJ", "lat": 32.468185, "lng": -116.925555}, {"cr": "50JQJ", "name": "Jauja TIJ", "lat": 32.481473, "lng": -116.952637}, {"cr": "50JWY", "name": "Jaraguay TIJ", "lat": 32.500161, "lng": -116.91679}, {"cr": "50JXC", "name": "Jalisco TIJ", "lat": 32.491893, "lng": -116.955365}, {"cr": "50K6O", "name": "Cartagena TIJ", "lat": 32.426409, "lng": -116.959511}, {"cr": "50KEM", "name": "Emperadores TIJ", "lat": 32.487324, "lng": -116.960932}, {"cr": "50KIK", "name": "CETYS TIJ", "lat": 32.501845, "lng": -116.927277}, {"cr": "50KJL", "name": "San Luis TIJ", "lat": 32.43154, "lng": -116.954039}, {"cr": "50KM1", "name": "Olivos TIJ", "lat": 32.465754, "lng": -116.981022}, {"cr": "50KNK", "name": "Panasonic TIJ", "lat": 32.538885, "lng": -116.91349}, {"cr": "50KTH", "name": "Catarina TIJ", "lat": 32.521591, "lng": -116.924955}, {"cr": "50KUB", "name": "Mexico Lindo TIJ", "lat": 32.468696, "lng": -116.93252}, {"cr": "50KUD", "name": "Sinaloa TIJ", "lat": 32.523222, "lng": -116.931416}, {"cr": "50L6Z", "name": "Estocolmo TIJ", "lat": 32.451739, "lng": -116.927126}, {"cr": "50L9P", "name": "Baja California TIJ", "lat": 32.469728, "lng": -116.982379}, {"cr": "50LCF", "name": "Fabiola TIJ", "lat": 32.503307, "lng": -116.976852}, {"cr": "50LJR", "name": "Sonora TIJ", "lat": 32.496806, "lng": -116.975926}, {"cr": "50LSC", "name": "Lazaro Cardenas TIJ", "lat": 32.496965, "lng": -116.968891}, {"cr": "50LU3", "name": "Dominguez TIJ", "lat": 32.539793, "lng": -117.011349}, {"cr": "50LWQ", "name": "Legal TIJ", "lat": 32.514596, "lng": -116.983546}, {"cr": "50LWW", "name": "Silva TIJ", "lat": 32.545668, "lng": -116.909732}, {"cr": "50MFL", "name": "Miguel Aleman TIJ", "lat": 32.491845, "lng": -116.913741}, {"cr": "50MJT", "name": "Suchiate TIJ", "lat": 32.505115, "lng": -116.933658}, {"cr": "50MLF", "name": "Montebello TIJ", "lat": 32.423877, "lng": -116.943451}, {"cr": "50MX7", "name": "Altata TIJ", "lat": 32.525207, "lng": -116.933985}, {"cr": "50NHS", "name": "TAP TIJ", "lat": 32.501207, "lng": -116.937904}, {"cr": "50NQP", "name": "Peninsula TIJ", "lat": 32.50542, "lng": -116.954406}, {"cr": "50NRQ", "name": "Cruz Roja TIJ", "lat": 32.507271, "lng": -116.964137}, {"cr": "50NTJ", "name": "Nueva Tijuana TIJ", "lat": 32.537665, "lng": -116.930028}, {"cr": "50O4K", "name": "Generacion 2000 TIJ", "lat": 32.428205, "lng": -116.940014}, {"cr": "50OG1", "name": "Caspio TIJ", "lat": 32.473717, "lng": -116.978567}, {"cr": "50OK3", "name": "Pasteje", "lat": 32.53282, "lng": -116.988127}, {"cr": "50OKV", "name": "Oviedo TIJ", "lat": 32.534603, "lng": -117.009537}, {"cr": "50OLR", "name": "Los Reyes TIJ", "lat": 32.453237, "lng": -116.929286}, {"cr": "50OQN", "name": "Ermita Norte TIJ", "lat": 32.511425, "lng": -116.972158}, {"cr": "50OU7", "name": "Valentin TIJ", "lat": 32.464716, "lng": -116.944597}, {"cr": "50OUP", "name": "Poniente TIJ", "lat": 32.509866, "lng": -116.964563}, {"cr": "50OWP", "name": "Gaxiola TIJ", "lat": 32.505946, "lng": -116.978965}, {"cr": "50P8D", "name": "Fernandez TIJ", "lat": 32.51467, "lng": -116.947922}, {"cr": "50PK1", "name": "El Mexicano TIJ", "lat": 32.510911, "lng": -116.961573}, {"cr": "50PNS", "name": "Pinos TIJ", "lat": 32.464597, "lng": -116.929215}, {"cr": "50Q0O", "name": "Pinos de Narez TIJ", "lat": 32.469999, "lng": -116.933896}, {"cr": "50Q70", "name": "San Blas", "lat": 32.521019, "lng": -116.93538}, {"cr": "50Q7Q", "name": "Vasconcelos TIJ", "lat": 32.539978, "lng": -116.927023}, {"cr": "50Q8P", "name": "Agave TIJ", "lat": 32.43621, "lng": -116.942581}, {"cr": "50QDQ", "name": "Cordilleras TIJ", "lat": 32.421924, "lng": -116.967272}, {"cr": "50QFZ", "name": "Sonoita TIJ", "lat": 32.51291, "lng": -117.012564}, {"cr": "50QRD", "name": "Ordaz TIJ", "lat": 32.458557, "lng": -116.923803}, {"cr": "50QUV", "name": "Placita TIJ", "lat": 32.497629, "lng": -116.967704}, {"cr": "50QVK", "name": "Volcanes TIJ", "lat": 32.426804, "lng": -116.968468}, {"cr": "50QXH", "name": "Maquiladora TIJ", "lat": 32.538436, "lng": -116.91953}, {"cr": "50QXL", "name": "Toluca TIJ", "lat": 32.531761, "lng": -116.928437}, {"cr": "50QYH", "name": "Cantabrica TIJ", "lat": 32.42516, "lng": -116.969849}, {"cr": "50QYZ", "name": "Azuela TIJ", "lat": 32.471492, "lng": -116.949385}, {"cr": "50R5S", "name": "Paseo del Rio TIJ", "lat": 32.489335, "lng": -116.930029}, {"cr": "50R98", "name": "Las Flores TIJ", "lat": 32.455183, "lng": -116.91876}, {"cr": "50RFR", "name": "Reforma TIJ", "lat": 32.465216, "lng": -116.953939}, {"cr": "50RJS", "name": "Jars TIJ", "lat": 32.51182, "lng": -116.897728}, {"cr": "50RMB", "name": "Plaza Quince TIJ", "lat": 32.498045, "lng": -116.964771}, {"cr": "50RUM", "name": "Centrum TIJ", "lat": 32.537686, "lng": -116.919887}, {"cr": "50RUX", "name": "Chapultepec TIJ", "lat": 32.505041, "lng": -117.007306}, {"cr": "50RUZ", "name": "Cecena TIJ", "lat": 32.534633, "lng": -117.021345}, {"cr": "50RV1", "name": "Pablo Neruda TIJ", "lat": 32.463582, "lng": -116.940291}, {"cr": "50RZS", "name": "Terrazas TIJ", "lat": 32.452304, "lng": -116.918024}, {"cr": "50S2I", "name": "Beny TIJ", "lat": 32.485109, "lng": -116.941754}, {"cr": "50SEQ", "name": "Sequoia TIJ", "lat": 32.494989, "lng": -116.906497}, {"cr": "50SHH", "name": "Los Charros TIJ", "lat": 32.502714, "lng": -116.973499}, {"cr": "50SMJ", "name": "LOMA ROJA TIJ", "lat": 32.466147, "lng": -116.937366}, {"cr": "50SMK", "name": "Militar TIJ", "lat": 32.528353, "lng": -116.988432}, {"cr": "50SW8", "name": "Neptuno TIJ", "lat": 32.462607, "lng": -116.977378}, {"cr": "50SX3", "name": "Guamuchil TIJ", "lat": 32.522866, "lng": -116.919435}, {"cr": "50SYD", "name": "Cascadas TIJ", "lat": 32.488536, "lng": -116.950469}, {"cr": "50SZU", "name": "Valencia TIJ", "lat": 32.492817, "lng": -116.970974}, {"cr": "50T7F", "name": "Claveles TIJ", "lat": 32.467842, "lng": -116.945183}, {"cr": "50TAY", "name": "Otay TIJ", "lat": 32.522981, "lng": -116.97216}, {"cr": "50TBH", "name": "Noriega TIJ", "lat": 32.484895, "lng": -116.975855}, {"cr": "50TBL", "name": "Los Parques TIJ", "lat": 32.480149, "lng": -116.960876}, {"cr": "50TCJ", "name": "Caballero TIJ", "lat": 32.535397, "lng": -117.014783}, {"cr": "50TEN", "name": "Tecnologico TIJ", "lat": 32.529353, "lng": -116.981697}, {"cr": "50THI", "name": "Clouthier TIJ", "lat": 32.495004, "lng": -116.923865}, {"cr": "50TIG", "name": "Garcia TIJ", "lat": 32.456629, "lng": -116.927007}, {"cr": "50TLF", "name": "Villa Lomas TIJ", "lat": 32.497897, "lng": -116.998026}, {"cr": "50TOP", "name": "Postal TIJ", "lat": 32.524185, "lng": -116.997751}, {"cr": "50TOS", "name": "Santos TIJ", "lat": 32.460279, "lng": -116.982293}, {"cr": "50TPA", "name": "Industrial II TIJ", "lat": 32.46889, "lng": -116.987227}, {"cr": "50TPR", "name": "Las Presas TIJ", "lat": 32.453213, "lng": -116.922883}, {"cr": "50TWJ", "name": "Contreras TIJ", "lat": 32.462113, "lng": -116.930544}, {"cr": "50U5M", "name": "Santander TIJ", "lat": 32.474705, "lng": -116.930897}, {"cr": "50UAY", "name": "Guaycura TIJ", "lat": 32.511166, "lng": -116.919714}, {"cr": "50UFF", "name": "Sandoval TIJ", "lat": 32.504933, "lng": -116.971869}, {"cr": "50UGL", "name": "Parra TIJ", "lat": 32.482213, "lng": -116.97785}, {"cr": "50URA", "name": "Urias TIJ", "lat": 32.484664, "lng": -116.942372}, {"cr": "50UT7", "name": "Las Huertas TIJ", "lat": 32.482411, "lng": -116.955745}, {"cr": "50UUJ", "name": "Parador TIJ", "lat": 32.539174, "lng": -116.914596}, {"cr": "50UZI", "name": "Rosal TIJ", "lat": 32.494497, "lng": -116.952001}, {"cr": "50V6T", "name": "Orquideas", "lat": 32.517262, "lng": -116.968796}, {"cr": "50VDN", "name": "20 de Noviembre TIJ", "lat": 32.512299, "lng": -116.986826}, {"cr": "50VNW", "name": "RHIN TIJ", "lat": 32.47934, "lng": -116.935565}, {"cr": "50VRX", "name": "Via Rapida TIJ", "lat": 32.517172, "lng": -116.981074}, {"cr": "50VVD", "name": "Beny TIJ", "lat": 32.485109, "lng": -116.941754}, {"cr": "50VVV", "name": "Del Sainz TIJ", "lat": 32.434327, "lng": -116.952693}, {"cr": "50W4E", "name": "Ocotlan TIJ", "lat": 32.490361, "lng": -116.957138}, {"cr": "50W7T", "name": "Aquino TIJ", "lat": 32.527009, "lng": -116.982758}, {"cr": "50WAB", "name": "Las Palomas TIJ", "lat": 32.476213, "lng": -116.935913}, {"cr": "50WFP", "name": "Del Padre TIJ", "lat": 32.534812, "lng": -117.017412}, {"cr": "50WIM", "name": "Halcones TIJ", "lat": 32.498248, "lng": -116.908393}, {"cr": "50WQD", "name": "San Jorge TIJ", "lat": 32.499162, "lng": -116.966333}, {"cr": "50WQF", "name": "Alarid TIJ", "lat": 32.497034, "lng": -116.961087}, {"cr": "50WZX", "name": "Solorza TIJ", "lat": 32.499673, "lng": -116.967285}, {"cr": "50X1H", "name": "Mimihuapan TIJ", "lat": 32.534905, "lng": -116.975741}, {"cr": "50XDL", "name": "Libertad TIJ", "lat": 32.533236, "lng": -117.008626}, {"cr": "50XEE", "name": "Corregidora TIJ", "lat": 32.497581, "lng": -116.990418}, {"cr": "50XEI", "name": "Campo Nuevo TIJ", "lat": 32.527824, "lng": -117.006062}, {"cr": "50XKA", "name": "Clinica 20 TIJ", "lat": 32.497443, "lng": -116.962997}, {"cr": "50XRY", "name": "Espectacular TIJ", "lat": 32.513755, "lng": -116.987638}, {"cr": "50XYR", "name": "Canaco TIJ", "lat": 32.533257, "lng": -117.02208}, {"cr": "50Y4E", "name": "Haitianos TIJ", "lat": 32.472526, "lng": -116.955152}, {"cr": "50Y8E", "name": "Vistas TIJ", "lat": 32.444342, "lng": -116.92416}, {"cr": "50YK4", "name": "Axolotl", "lat": 32.426193, "lng": -116.949087}, {"cr": "50YKF", "name": "Ingenieros TIJ", "lat": 32.529347, "lng": -116.973828}, {"cr": "50YKG", "name": "Gobierno TIJ", "lat": 32.530608, "lng": -117.015145}, {"cr": "50YKH", "name": "Navarrete TIJ", "lat": 32.505858, "lng": -116.964962}, {"cr": "50YPX", "name": "San Pedro TIJ", "lat": 32.500531, "lng": -116.969814}, {"cr": "50YWV", "name": "Gayuba TIJ", "lat": 32.434543, "lng": -116.940926}, {"cr": "50Z4W", "name": "Sor Juana TIJ", "lat": 32.548858, "lng": -116.929767}, {"cr": "50ZBB", "name": "Alegre TIJ", "lat": 32.511851, "lng": -116.991833}, {"cr": "50ZBD", "name": "Drako TIJ", "lat": 32.49975, "lng": -116.908898}, {"cr": "50ZCG", "name": "Amistad TIJ", "lat": 32.478237, "lng": -116.955838}, {"cr": "50ZCH", "name": "Salmon TIJ", "lat": 32.521719, "lng": -116.985969}, {"cr": "50ZVJ", "name": "Murua TIJ", "lat": 32.516309, "lng": -116.946584}, {"cr": "50ZVQ", "name": "Imperial TIJ", "lat": 32.539144, "lng": -116.899547}, {"cr": "50ZWW", "name": "Garita TIJ", "lat": 32.543954, "lng": -116.936811}, {"cr": "50ZXH", "name": "Bugambilias TIJ", "lat": 32.531976, "lng": -116.947704}, {"cr": "50ZXL", "name": "Campestre Murua TIJ", "lat": 32.52479, "lng": -116.919669}, {"cr": "50ZXU", "name": "Parque TIJ", "lat": 32.508001, "lng": -116.919261}, {"cr": "50V78", "name": "Tazumal TIJ", "lat": 32.46961, "lng": -116.95157}, {"cr": "502GO", "name": "SagitarioTIJ", "lat": 32.546731, "lng": -116.921655}, {"cr": "50ALZ", "name": "Villas de AlcazarTIJ", "lat": 32.460507, "lng": -116.923221}, {"cr": "50DZC", "name": "Cinco Diez TIJ", "lat": 32.500286, "lng": -116.968512}, {"cr": "50EV4", "name": "NiloTIJ", "lat": 32.470731, "lng": -116.927643}, {"cr": "50P8I", "name": "Xoloitzcuintle", "lat": 32.518549, "lng": -116.915832}, {"cr": "50T1E", "name": "Maverik", "lat": 32.449528, "lng": -116.915883}, {"cr": "50WAE", "name": "Aereopuerto TIJ", "lat": 32.541869, "lng": -116.994692}];
+
+/* ══════════════════════════════════════════════════════
+   SECURITY
+══════════════════════════════════════════════════════ */
+const _C = Object.freeze({_a:'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',_b:'dbe9787aaf4002c6662e490b3f1f7512807459b6dee2e1c2e56738e1cbbd993c'});
+
+const ENG_COLS = ['#3B82F6','#10B981','#EF4444','#A855F7','#F59E0B','#EC4899','#06B6D4','#84CC16'];
+const ENG_BG   = ['#1e3a5f','#064e3b','#7f1d1d','#4c1d95','#78350f','#831843','#164e63','#365314'];
+
+/* ══════════════════════════════════════════════════════
+   STATE
+══════════════════════════════════════════════════════ */
+let S = {
+  selEng: null, selDay: null,
+  adminLogged: false,
+  mapsLoaded: false,
+  apiKey: localStorage.getItem('mapsApiKey')||'',
+  realTimes: {},           // `${ei}-${day}` -> [secs]
+  plan: null,              // computed: { engineers:[{id,name,color,days:[{date,dayLabel,stores:[],mapsUrl}]}] }
+  cfg: loadCfg()
+};
+
+function loadCfg(){
+  const def = {
+    startDate: '2026-03-06',
+    totalDays: 10,
+    engineers:[
+      {name:'Ing. Carlos Flores', daily:5},
+      {name:'Ing. Ever Juarez',   daily:5},
+      {name:'Ing. Antonio Colin', daily:5},
+      {name:'Ing. José Hernández',daily:5},
+      {name:'Ing. David Flores',  daily:5},
+    ]
+  };
+  try{
+    const saved = JSON.parse(localStorage.getItem('auditCfg'));
+    if(saved && saved.engineers && saved.engineers.length) return saved;
+  }catch(e){}
+  return def;
+}
+function saveCfg(){ localStorage.setItem('auditCfg', JSON.stringify(S.cfg)); }
+
+/* ══════════════════════════════════════════════════════
+   DATE HELPERS
+══════════════════════════════════════════════════════ */
+const DAY_NAMES_ES = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const MON_ES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const WEEKENDS = new Set([0,6]); // 0=Sunday,6=Saturday
+
+function addDays(dateStr, n){
+  const d = new Date(dateStr+'T00:00:00');
+  d.setDate(d.getDate()+n);
+  return d;
+}
+function fmtDate(d){
+  return `${DAY_NAMES_ES[d.getDay()]} ${d.getDate()} ${MON_ES[d.getMonth()]}`;
+}
+function isWeekend(d){ return WEEKENDS.has(d.getDay()); }
+
+/* ══════════════════════════════════════════════════════
+   MATH / GEOMETRY
+══════════════════════════════════════════════════════ */
+function dist(a,b){ return Math.sqrt((a.lat-b.lat)**2+(a.lng-b.lng)**2); }
+function distKm(a,b){ return dist(a,b)*111; }
+
+function nnRoute(stores){
+  if(stores.length<=1) return stores.slice();
+  const visited=new Array(stores.length).fill(false);
+  const route=[];
+  let cur=stores.reduce((mi,s,i)=>s.lng<stores[mi].lng?i:mi,0);
+  visited[cur]=true; route.push(stores[cur]);
+  while(route.length<stores.length){
+    let best=-1,bd=Infinity;
+    for(let j=0;j<stores.length;j++){
+      if(!visited[j]){const d=dist(route[route.length-1],stores[j]);if(d<bd){bd=d;best=j;}}
+    }
+    visited[best]=true; route.push(stores[best]);
+  }
+  return route;
+}
+
+// Simple K-Means clustering
+function kmeans(points, k, maxIter=150){
+  if(points.length<=k) return points.map((_,i)=>i%k);
+  // Initialize centroids with k-means++
+  const cents=[points[Math.floor(Math.random()*points.length)]];
+  while(cents.length<k){
+    const dists=points.map(p=>Math.min(...cents.map(c=>dist(p,c)**2)));
+    const sum=dists.reduce((a,b)=>a+b,0);
+    let r=Math.random()*sum, cum=0;
+    for(let i=0;i<points.length;i++){cum+=dists[i];if(cum>=r){cents.push(points[i]);break;}}
+    if(cents.length<k) cents.push(points[points.length-1]);
+  }
+  let labels=new Array(points.length).fill(0);
+  for(let iter=0;iter<maxIter;iter++){
+    const newL=points.map(p=>{
+      let bi=0,bd=Infinity;
+      cents.forEach((c,i)=>{const d=dist(p,c);if(d<bd){bd=d;bi=i;}});
+      return bi;
+    });
+    // Update centroids
+    const sums=Array.from({length:k},()=>({lat:0,lng:0,n:0}));
+    newL.forEach((ci,i)=>{sums[ci].lat+=points[i].lat;sums[ci].lng+=points[i].lng;sums[ci].n++;});
+    sums.forEach((s,i)=>{if(s.n>0){cents[i]={lat:s.lat/s.n,lng:s.lng/s.n};}});
+    if(newL.every((v,i)=>v===labels[i])) break;
+    labels=newL;
+  }
+  return labels;
+}
+
+function balanceClusters(stores, labels, k, targets){
+  // targets[i] = desired count for cluster i
+  for(let iter=0;iter<2000;iter++){
+    const counts=new Array(k).fill(0);
+    labels.forEach(l=>counts[l]++);
+    const maxI=counts.indexOf(Math.max(...counts));
+    const minI=counts.indexOf(Math.min(...counts));
+    if(counts[maxI]-counts[minI]<=2) break;
+    if(counts[maxI]<=targets[maxI]) break;
+    // centroid of min cluster
+    const minStores=stores.filter((_,i)=>labels[i]===minI);
+    const mc={lat:minStores.reduce((s,x)=>s+x.lat,0)/minStores.length,
+              lng:minStores.reduce((s,x)=>s+x.lng,0)/minStores.length};
+    // find closest in max cluster
+    let bi=-1,bd=Infinity;
+    stores.forEach((s,i)=>{if(labels[i]===maxI){const d=dist(s,mc);if(d<bd){bd=d;bi=i;}}});
+    if(bi>=0) labels[bi]=minI;
+  }
+  return labels;
+}
+
+/* ══════════════════════════════════════════════════════
+   MAPS URL GENERATOR
+══════════════════════════════════════════════════════ */
+function mapsUrl(stores){
+  if(!stores.length) return '#';
+  const pts=stores.map(s=>`${s.lat},${s.lng}`);
+  if(pts.length===1) return `https://www.google.com/maps/search/?api=1&query=${pts[0]}`;
+  const mid=pts.slice(1,-1).slice(0,8);
+  const wp=mid.length?`&waypoints=${mid.join('|')}`:'';
+  return `https://www.google.com/maps/dir/?api=1&origin=${pts[0]}&destination=${pts[pts.length-1]}${wp}&travelmode=driving`;
+}
+
+/* ══════════════════════════════════════════════════════
+   SCHEDULE CALCULATION
+══════════════════════════════════════════════════════ */
+function minToHH(m){
+  const h=Math.floor(m/60), mn=Math.round(m%60);
+  return `${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
+}
+function estSecs(a,b){ return Math.max(300,Math.round(distKm(a,b)/25*3600)); }
+
+function buildSchedule(stores, travelSecsArr){
+  // travelSecsArr[i] = secs from store[i] to store[i+1], len = stores.length-1
+  const rows=[];
+  let cur=8*60; // 08:00
+  for(let i=0;i<stores.length;i++){
+    const travelMin = i===0 ? 20 : (travelSecsArr[i-1]||estSecs(stores[i-1],stores[i]))/60;
+    cur += travelMin;
+    const arr=minToHH(cur);
+    const dep=minToHH(cur+20);
+    const nextMin = i<stores.length-1 ? Math.round((travelSecsArr[i]||estSecs(stores[i],stores[i+1]))/60) : null;
+    rows.push({arr,dep,nextMin});
+    cur+=20;
+  }
+  return rows;
+}
+
+/* ══════════════════════════════════════════════════════
+   PLAN COMPUTATION ENGINE
+══════════════════════════════════════════════════════ */
+function setProgress(pct,msg){
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('calc-step').textContent=msg||'';
+}
+
+async function computePlan(cfg){
+  document.getElementById('calc-overlay').classList.add('show');
+  setProgress(5,'Inicializando...');
+  await tick();
+
+  const engs=cfg.engineers;
+  const k=engs.length;
+  const stores=ALL_STORES.slice();
+
+  // Step 1: cluster stores into k engineer zones
+  setProgress(15,'Agrupando tiendas por zonas geográficas...');
+  await tick();
+
+  let labels;
+  if(k===1){
+    labels=new Array(stores.length).fill(0);
+  } else {
+    const pts=stores.map(s=>({lat:s.lat,lng:s.lng}));
+    labels=kmeans(pts,k);
+    // balance: each engineer gets totalDays*daily stores
+    const targets=engs.map(e=>e.daily*cfg.totalDays);
+    const totalAssigned=targets.reduce((a,b)=>a+b,0);
+    // adjust if needed
+    if(totalAssigned!==stores.length){
+      const diff=stores.length-totalAssigned;
+      // distribute remaining to first engineer
+      targets[0]+=diff;
+    }
+    labels=balanceClusters(stores,labels,k,targets);
+  }
+  setProgress(40,'Optimizando rutas diarias...');
+  await tick();
+
+  // Build plan
+  const plan={engineers:[]};
+  for(let ei=0;ei<k;ei++){
+    const engStores=stores.filter((_,i)=>labels[i]===ei);
+    const daily=engs[ei].daily;
+    const totalDays=cfg.totalDays;
+
+    // Sub-cluster into day groups — just chunk sorted stores
+    // Sort by lng then lat for geographic continuity
+    const subK=Math.min(totalDays, engStores.length);
+    let dayAssign;
+    if(subK<=1){
+      dayAssign=engStores.map((_,i)=>0);
+    } else {
+      const subPts=engStores.map(s=>({lat:s.lat,lng:s.lng}));
+      dayAssign=kmeans(subPts,subK);
+      // Balance day groups to ~daily stores each
+      const dayTargets=new Array(subK).fill(daily);
+      dayAssign=balanceClusters(engStores,dayAssign,subK,dayTargets);
+    }
+
+    // Sort day clusters by centroid longitude
+    const dayGroups={};
+    engStores.forEach((s,i)=>{
+      const d=dayAssign[i]||0;
+      if(!dayGroups[d]) dayGroups[d]=[];
+      dayGroups[d].push(s);
+    });
+    const sortedDayKeys=Object.keys(dayGroups).map(Number)
+      .sort((a,b)=>{
+        const ca=dayGroups[a];const cb=dayGroups[b];
+        const avgLng=arr=>arr.reduce((s,x)=>s+x.lng,0)/arr.length;
+        return avgLng(ca)-avgLng(cb);
+      });
+
+    const engObj={
+      id:ei,name:engs[ei].name,
+      color:ENG_COLS[ei%ENG_COLS.length],
+      bgColor:ENG_BG[ei%ENG_BG.length],
+      total:engStores.length,
+      days:[]
+    };
+
+    sortedDayKeys.forEach((dk,dayIdx)=>{
+      if(dayIdx>=totalDays) return;
+      const dateObj=addDays(cfg.startDate,dayIdx);
+      const optimized=nnRoute(dayGroups[dk]);
+      engObj.days.push({
+        dayNum:dayIdx+1,
+        date:fmtDate(dateObj),
+        isWeekend:isWeekend(dateObj),
+        stores:optimized,
+        mapsUrl:mapsUrl(optimized)
+      });
+    });
+
+    plan.engineers.push(engObj);
+    setProgress(40+Math.round((ei+1)/k*45), `Procesando zona ${ei+1} de ${k}...`);
+    await tick();
+  }
+
+  setProgress(95,'Finalizando...');
+  await tick();
+  document.getElementById('calc-overlay').classList.remove('show');
+  return plan;
+}
+
+function tick(){ return new Promise(r=>setTimeout(r,30)); }
+
+/* ══════════════════════════════════════════════════════
+   RENDER
+══════════════════════════════════════════════════════ */
+function renderAll(){
+  renderSidebar();
+  renderDayBar();
+  renderRoute();
+  updateHdrSub();
+}
+
+function updateHdrSub(){
+  if(!S.plan) return;
+  const engs=S.plan.engineers;
+  const total=engs.reduce((s,e)=>s+e.total,0);
+  document.getElementById('hdr-sub').textContent=
+    `Tijuana Centro · ${total} tiendas · ${engs.length} ingenieros · ${S.cfg.totalDays} días`;
+}
+
+function renderSidebar(){
+  const el=document.getElementById('eng-list');
+  el.innerHTML='';
+  if(!S.plan) return;
+  S.plan.engineers.forEach((eng,i)=>{
+    const active=S.selEng===i;
+    const div=document.createElement('div');
+    div.className='eng-item'+(active?' active':'');
+    div.onclick=()=>selEng(i);
+    div.innerHTML=`
+      <div class="eng-av" style="background:${eng.bgColor};color:${eng.color}">${i+1}</div>
+      <div class="eng-info">
+        <div class="eng-name">${eng.name}</div>
+        <div class="eng-sub">${eng.total} tiendas · Zona ${i+1}</div>
+      </div>
+      <span class="eng-badge" style="background:${eng.bgColor};color:${eng.color}">${eng.total}</span>`;
+    el.appendChild(div);
+  });
+}
+
+function renderDayBar(){
+  const el=document.getElementById('day-chips');
+  el.innerHTML='';
+  if(!S.plan||S.selEng===null) return;
+  const eng=S.plan.engineers[S.selEng];
+  if(!eng) return;
+  eng.days.forEach(d=>{
+    const active=S.selDay===d.dayNum;
+    const col=eng.color;
+    const chip=document.createElement('button');
+    chip.className='dchip'+(active?' active':'')+(d.isWeekend?' weekend':'');
+    if(active) chip.style.cssText=`background:${col};border-color:${col}`;
+    chip.onclick=()=>selDay(d.dayNum);
+    chip.innerHTML=`Día ${d.dayNum}<span class="dchip-date">${d.date}</span>`;
+    el.appendChild(chip);
+  });
+}
+
+function renderRoute(){
+  const {selEng,selDay,plan}=S;
+  if(selEng===null||selDay===null||!plan){showEmpty(true);return;}
+  const eng=plan.engineers[selEng];
+  if(!eng){showEmpty(true);return;}
+  const dayObj=eng.days.find(d=>d.dayNum===selDay);
+  if(!dayObj||!dayObj.stores.length){showEmpty(true);return;}
+
+  showEmpty(false);
+  const stores=dayObj.stores;
+  const col=eng.color;
+  const key=`${selEng}-${selDay}`;
+  const realSecs=S.realTimes[key];
+  const isReal=!!realSecs;
+  const tSecs=realSecs||stores.slice(0,-1).map((_,i)=>estSecs(stores[i],stores[i+1]));
+  const sched=buildSchedule(stores,tSecs);
+  const lastDep=sched[sched.length-1].dep;
+
+  // Route header
+  document.getElementById('rh').style.display='block';
+  document.getElementById('tw').style.display='block';
+  const wTag=dayObj.isWeekend?'<span class="we-tag">📅 Fin de semana</span>':'';
+  document.getElementById('rh-title').innerHTML=
+    `<span style="color:${col}">${eng.name}</span> · Día ${selDay}${wTag}`;
+  document.getElementById('rh-sub').textContent=
+    `${dayObj.date} · ${stores.length} tiendas · Tijuana Centro`;
+  document.getElementById('maps-link').href=dayObj.mapsUrl||'#';
+
+  document.getElementById('k-stores').textContent=stores.length;
+  document.getElementById('k-start').textContent='08:00';
+  document.getElementById('k-end').textContent=lastDep;
+  const [lh,lm]=lastDep.split(':').map(Number);
+  const tot=lh*60+lm-8*60;
+  document.getElementById('k-total').textContent=`${Math.floor(tot/60)}h ${tot%60}m`;
+
+  // API status
+  const ast=document.getElementById('api-st');
+  if(isReal){ast.className='live';ast.textContent='🟢 Tiempo real Maps';}
+  else if(S.apiKey){ast.className='est';ast.textContent='⏱ Estimado (click Actualizar)';}
+  else{ast.className='est';ast.textContent='⏱ Estimado (sin API key)';}
+
+  // Table
+  const tbody=document.getElementById('tbody');
+  tbody.innerHTML='';
+  stores.forEach((s,i)=>{
+    const sc=sched[i];
+    const tn=sc.nextMin;
+    let pill;
+    if(tn===null) pill='<span class="pill n">—</span>';
+    else if(tn<=15) pill=`<span class="pill g">🚗 ${tn} min</span>`;
+    else if(tn<=25) pill=`<span class="pill y">🚗 ${tn} min</span>`;
+    else            pill=`<span class="pill r">🚗 ${tn} min</span>`;
+
+    const tr=document.createElement('tr');
+    tr.innerHTML=`
+      <td class="td-num">${i+1}</td>
+      <td><span class="td-cr" style="color:${col}">${s.cr}</span></td>
+      <td class="td-nm">${s.name}</td>
+      <td class="td-t" style="color:${col}">${sc.arr}</td>
+      <td class="td-t">${sc.dep}</td>
+      <td>${pill}</td>
+      <td class="td-co">${s.lat.toFixed(5)}, ${s.lng.toFixed(5)}</td>
+      <td class="td-pin"><a href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lng}" target="_blank" title="Ver en Maps">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </a></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function showEmpty(show){
+  document.getElementById('empty').style.display=show?'flex':'none';
+  document.getElementById('rh').style.display=show?'none':'block';
+  document.getElementById('tw').style.display=show?'none':'block';
+}
+
+/* ══════════════════════════════════════════════════════
+   SELECTION
+══════════════════════════════════════════════════════ */
+function selEng(i){
+  S.selEng=i;
+  if(!S.selDay) S.selDay=1;
+  renderSidebar();
+  renderDayBar();
+  renderRoute();
+  if(window.innerWidth<769) closeSB();
+}
+function selDay(d){
+  S.selDay=d;
+  renderDayBar();
+  renderRoute();
+}
+
+/* ══════════════════════════════════════════════════════
+   GOOGLE MAPS / REAL TIMES
+══════════════════════════════════════════════════════ */
+let distSvc=null;
+function loadMapsApi(key){
+  return new Promise((res,rej)=>{
+    if(window.google&&window.google.maps){res();return;}
+    const sc=document.createElement('script');
+    sc.src=`https://maps.googleapis.com/maps/api/js?key=${key}&libraries=geometry`;
+    sc.onload=()=>{distSvc=new google.maps.DistanceMatrixService();res();};
+    sc.onerror=rej;
+    document.head.appendChild(sc);
+  });
+}
+async function fetchRealTimes(stores){
+  if(!distSvc||stores.length<2) return null;
+  const origins=stores.slice(0,-1).map(s=>new google.maps.LatLng(s.lat,s.lng));
+  const dests=stores.slice(1).map(s=>new google.maps.LatLng(s.lat,s.lng));
+  return new Promise(res=>{
+    distSvc.getDistanceMatrix({
+      origins,destinations:dests,travelMode:google.maps.TravelMode.DRIVING,
+      drivingOptions:{departureTime:new Date(),trafficModel:google.maps.TrafficModel.BEST_GUESS}
+    },(r,st)=>{
+      if(st==='OK'){
+        const times=r.rows.map((row,i)=>{
+          const el=row.elements[i];
+          return el&&el.status==='OK'?(el.duration_in_traffic||el.duration).value:null;
+        });
+        res(times.every(t=>t!==null)?times:null);
+      } else res(null);
+    });
+  });
+}
+async function refreshTimes(){
+  if(!S.selEng===null||S.selDay===null) return;
+  if(!S.apiKey){openApiModal();return;}
+  const btn=document.getElementById('ref-btn');
+  btn.classList.add('spin');btn.disabled=true;
+  const ast=document.getElementById('api-st');
+  ast.className='loading';ast.textContent='⟳ Consultando Maps...';
+  try{
+    if(!S.mapsLoaded){await loadMapsApi(S.apiKey);S.mapsLoaded=true;}
+    const eng=S.plan.engineers[S.selEng];
+    const day=eng.days.find(d=>d.dayNum===S.selDay);
+    if(day){
+      const t=await fetchRealTimes(day.stores);
+      if(t){S.realTimes[`${S.selEng}-${S.selDay}`]=t;
+        document.getElementById('live-pill').style.display='flex';}
+    }
+    renderRoute();
+  }catch(e){ast.className='est';ast.textContent='⚠️ Error: '+e.message;}
+  btn.classList.remove('spin');btn.disabled=false;
+}
+
+/* ══════════════════════════════════════════════════════
+   ADMIN PANEL
+══════════════════════════════════════════════════════ */
+function openAdminModal(){
+  if(S.adminLogged){showAdmin();return;}
+  openM('login-ov');
+  setTimeout(()=>document.getElementById('li-u').focus(),200);
+}
+async function doLogin(){
+  const u=document.getElementById('li-u').value.trim();
+  const p=document.getElementById('li-p').value;
+  const [hu,hp]=await Promise.all([sha256(u),sha256(p)]);
+  const al=document.getElementById('login-alert');
+  if(hu===_C._a&&hp===_C._b){
+    S.adminLogged=true;
+    closeM('login-ov');
+    document.getElementById('li-u').value='';
+    document.getElementById('li-p').value='';
+    al.style.display='none';
+    showAdmin();
+  }else{
+    al.className='alert alert-e';
+    al.textContent='Credenciales incorrectas. Inténtalo de nuevo.';
+    al.style.display='block';
+    document.getElementById('li-p').value='';
+  }
+}
+function showAdmin(){
+  // populate date fields
+  document.getElementById('cfg-date').value=S.cfg.startDate;
+  document.getElementById('cfg-days').value=S.cfg.totalDays;
+  renderAdminEngs();
+  openM('admin-ov');
+}
+function renderAdminEngs(){
+  const list=document.getElementById('adm-eng-list');
+  list.innerHTML='';
+  S.cfg.engineers.forEach((eng,i)=>{
+    const col=ENG_COLS[i%ENG_COLS.length];
+    const bg=ENG_BG[i%ENG_BG.length];
+    const row=document.createElement('div');
+    row.className='eng-row';
+    row.id='er-'+i;
+    row.innerHTML=`
+      <div class="eng-av-sm" style="background:${bg};color:${col}">${i+1}</div>
+      <input type="text" class="er-name" placeholder="Nombre del ingeniero" value="${eng.name}"/>
+      <input type="number" class="load-inp er-load" min="1" max="20" value="${eng.daily}" title="Tiendas por día"/>
+      <button class="del-btn" onclick="delEng(${i})" title="Eliminar">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>`;
+    list.appendChild(row);
+  });
+}
+function addEng(){
+  if(S.cfg.engineers.length>=8){
+    alert('Máximo 8 ingenieros permitidos.');return;
+  }
+  S.cfg.engineers.push({name:'Nuevo Ingeniero',daily:5});
+  renderAdminEngs();
+}
+function delEng(i){
+  if(S.cfg.engineers.length<=1){alert('Se requiere al menos un ingeniero.');return;}
+  S.cfg.engineers.splice(i,1);
+  renderAdminEngs();
+}
+async function saveAndRecalc(){
+  // Read values from form
+  const dateVal=document.getElementById('cfg-date').value;
+  const daysVal=parseInt(document.getElementById('cfg-days').value)||10;
+  const rows=document.querySelectorAll('.eng-row');
+  const engs=[];
+  rows.forEach(r=>{
+    const nm=r.querySelector('.er-name').value.trim()||'Ingeniero';
+    const dl=Math.max(1,parseInt(r.querySelector('.er-load').value)||5);
+    engs.push({name:nm,daily:dl});
+  });
+  if(!engs.length){alert('Agrega al menos un ingeniero.');return;}
+
+  S.cfg={startDate:dateVal||'2026-03-06',totalDays:daysVal,engineers:engs};
+  saveCfg();
+  S.realTimes={};S.selEng=null;S.selDay=null;
+  closeM('admin-ov');
+
+  S.plan=await computePlan(S.cfg);
+  renderAll();
+}
+function adminLogout(){S.adminLogged=false;closeM('admin-ov');}
+
+/* ══════════════════════════════════════════════════════
+   API KEY
+══════════════════════════════════════════════════════ */
+function openApiModal(){document.getElementById('api-inp').value=S.apiKey;openM('api-ov');}
+function saveApi(){
+  const k=document.getElementById('api-inp').value.trim();
+  S.apiKey=k;localStorage.setItem('mapsApiKey',k);
+  closeM('api-ov');
+  if(k){loadMapsApi(k).then(()=>{S.mapsLoaded=true;document.getElementById('live-pill').style.display='flex';}).catch(()=>{});}
+}
+function clearApi(){S.apiKey='';localStorage.removeItem('mapsApiKey');S.mapsLoaded=false;
+  document.getElementById('live-pill').style.display='none';closeM('api-ov');renderRoute();}
+
+/* ══════════════════════════════════════════════════════
+   MODAL & SIDEBAR HELPERS
+══════════════════════════════════════════════════════ */
+function openM(id){document.getElementById(id).classList.add('open');}
+function closeM(id){document.getElementById(id).classList.remove('open');}
+function bgClose(e,id){if(e.target.id===id)closeM(id);}
+function toggleSB(){document.getElementById('sb').classList.toggle('open');document.getElementById('sbov').classList.toggle('open');}
+function closeSB(){document.getElementById('sb').classList.remove('open');document.getElementById('sbov').classList.remove('open');}
+
+/* ══════════════════════════════════════════════════════
+   CRYPTO
+══════════════════════════════════════════════════════ */
+async function sha256(msg){
+  const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(msg));
+  return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+
+/* ══════════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded',async()=>{
+  // Keyboard shortcuts
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') document.querySelectorAll('.overlay.open').forEach(o=>o.classList.remove('open'));
+  });
+  if(S.apiKey){loadMapsApi(S.apiKey).then(()=>{S.mapsLoaded=true;document.getElementById('live-pill').style.display='flex';}).catch(()=>{});}
+
+  // Compute initial plan
+  S.plan=await computePlan(S.cfg);
+  renderAll();
+  // Auto select first engineer day 1
+  if(S.plan.engineers.length){selEng(0);}
+});
+document.addEventListener('contextmenu',e=>{
+  if(e.target.closest('#login-ov')||e.target.closest('#admin-ov'))e.preventDefault();
+});
+</script>
+</body>
+</html>
