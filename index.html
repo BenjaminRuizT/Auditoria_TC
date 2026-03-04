@@ -543,7 +543,7 @@ tr.row-sel td{background:var(--c1l)}
         </p>
         <div class="fg">
           <label>Nombre de la auditoría</label>
-          <input type="text" id="audit-name" placeholder="ej. Tijuana Centro · Correos"/>
+          <input type="text" id="audit-name" placeholder="ej. Tijuana Centro"/>
         </div>
         <div class="fg">
           <label>Listado de tiendas (CR ↹ NOMBRE — una por línea)</label>
@@ -639,7 +639,7 @@ function loadAudits(){
   }catch(e){}
   // Default: Tijuana Centro
   return [{
-    id:'default',name:'Tijuana Centro · Correos',
+    id:'default',name:'Tijuana Centro',
     stores:DEFAULT_STORES,createdAt:new Date('2026-03-06').toISOString()
   }];
 }
