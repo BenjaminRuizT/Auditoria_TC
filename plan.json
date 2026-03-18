@@ -1,9 +1,9 @@
 {
-  "pushedAt": "2026-03-18T20:14:27.178Z",
+  "pushedAt": "2026-03-18T20:16:40.405Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-03-18",
-    "totalDays": 8,
+    "totalDays": 6,
     "engineers": [
       {
         "name": "Ing. Carlos Flores"
@@ -56,13 +56,19 @@
                 "lng": -116.987932
               },
               {
+                "cr": "50ABR",
+                "name": "Alba Roja TIJ",
+                "lat": 32.497167,
+                "lng": -116.983781
+              },
+              {
                 "cr": "50OWP",
                 "name": "Gaxiola TIJ",
                 "lat": 32.505946,
                 "lng": -116.978965
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497581,-116.990418&destination=32.505946,-116.978965&waypoints=32.498048,-116.987932&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497581,-116.990418&destination=32.505946,-116.978965&waypoints=32.498048,-116.987932|32.497167,-116.983781&travelmode=driving"
           },
           {
             "dayNum": 2,
@@ -70,25 +76,69 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50ABR",
-                "name": "Alba Roja TIJ",
-                "lat": 32.497167,
-                "lng": -116.983781
+                "cr": "50TPA",
+                "name": "Industrial II TIJ",
+                "lat": 32.46889,
+                "lng": -116.987227
               },
               {
-                "cr": "50LJR",
-                "name": "Sonora TIJ",
-                "lat": 32.496806,
-                "lng": -116.975926
+                "cr": "50L9P",
+                "name": "Baja California TIJ",
+                "lat": 32.469728,
+                "lng": -116.982379
+              },
+              {
+                "cr": "50KM1",
+                "name": "Olivos TIJ",
+                "lat": 32.465754,
+                "lng": -116.981022
+              },
+              {
+                "cr": "50OG1",
+                "name": "Caspio TIJ",
+                "lat": 32.473717,
+                "lng": -116.978567
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497167,-116.983781&destination=32.496806,-116.975926&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.46889,-116.987227&destination=32.473717,-116.978567&waypoints=32.469728,-116.982379|32.465754,-116.981022&travelmode=driving"
           },
           {
             "dayNum": 3,
             "date": "Vie 20 Mar",
             "isWE": false,
             "stores": [
+              {
+                "cr": "50HS9",
+                "name": "Moctezuma TIJ",
+                "lat": 32.476405,
+                "lng": -116.973753
+              },
+              {
+                "cr": "50FB4",
+                "name": "Conquistadores TIJ",
+                "lat": 32.475344,
+                "lng": -116.968412
+              },
+              {
+                "cr": "50HTA",
+                "name": "Sanchez Taboada TIJ",
+                "lat": 32.469099,
+                "lng": -116.972714
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.476405,-116.973753&destination=32.469099,-116.972714&waypoints=32.475344,-116.968412&travelmode=driving"
+          },
+          {
+            "dayNum": 4,
+            "date": "Sáb 21 Mar",
+            "isWE": true,
+            "stores": [
+              {
+                "cr": "50LJR",
+                "name": "Sonora TIJ",
+                "lat": 32.496806,
+                "lng": -116.975926
+              },
               {
                 "cr": "50YPX",
                 "name": "San Pedro TIJ",
@@ -102,33 +152,13 @@
                 "lng": -116.969306
               },
               {
-                "cr": "50DI8",
-                "name": "Datileros TIJ",
-                "lat": 32.50319,
-                "lng": -116.968646
+                "cr": "50QUV",
+                "name": "Placita TIJ",
+                "lat": 32.497629,
+                "lng": -116.967704
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.500531,-116.969814&destination=32.50319,-116.968646&waypoints=32.500838,-116.969306&travelmode=driving"
-          },
-          {
-            "dayNum": 4,
-            "date": "Sáb 21 Mar",
-            "isWE": true,
-            "stores": [
-              {
-                "cr": "50V6T",
-                "name": "Orquideas",
-                "lat": 32.517262,
-                "lng": -116.968796
-              },
-              {
-                "cr": "50WZX",
-                "name": "Solorza TIJ",
-                "lat": 32.499673,
-                "lng": -116.967285
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.517262,-116.968796&destination=32.499673,-116.967285&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.496806,-116.975926&destination=32.497629,-116.967704&waypoints=32.500531,-116.969814|32.500838,-116.969306&travelmode=driving"
           },
           {
             "dayNum": 5,
@@ -136,31 +166,31 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50LSC",
-                "name": "Lazaro Cardenas TIJ",
-                "lat": 32.496965,
-                "lng": -116.968891
+                "cr": "50SW8",
+                "name": "Neptuno TIJ",
+                "lat": 32.462607,
+                "lng": -116.977378
               },
               {
-                "cr": "50QUV",
-                "name": "Placita TIJ",
-                "lat": 32.497629,
-                "lng": -116.967704
+                "cr": "501TS",
+                "name": "Ganimides",
+                "lat": 32.457018,
+                "lng": -116.973106
               },
               {
-                "cr": "50CQF",
-                "name": "Aviles TIJ",
-                "lat": 32.498224,
-                "lng": -116.967867
+                "cr": "50JM1",
+                "name": "Marte TIJ",
+                "lat": 32.462129,
+                "lng": -116.967119
               },
               {
-                "cr": "50WQD",
-                "name": "San Jorge TIJ",
-                "lat": 32.499162,
-                "lng": -116.966333
+                "cr": "50JLB",
+                "name": "Omega TIJ",
+                "lat": 32.461514,
+                "lng": -116.963404
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.496965,-116.968891&destination=32.499162,-116.966333&waypoints=32.497629,-116.967704|32.498224,-116.967867&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.462607,-116.977378&destination=32.461514,-116.963404&waypoints=32.457018,-116.973106|32.462129,-116.967119&travelmode=driving"
           },
           {
             "dayNum": 6,
@@ -168,71 +198,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50YKH",
-                "name": "Navarrete TIJ",
-                "lat": 32.505858,
-                "lng": -116.964962
+                "cr": "50GHU",
+                "name": "Nayarit TIJ",
+                "lat": 32.463552,
+                "lng": -116.973447
               },
               {
-                "cr": "50NRQ",
-                "name": "Cruz Roja TIJ",
-                "lat": 32.507271,
-                "lng": -116.964137
+                "cr": "50EL4",
+                "name": "Selva TIJ",
+                "lat": 32.482786,
+                "lng": -116.965357
+              },
+              {
+                "cr": "50LSC",
+                "name": "Lazaro Cardenas TIJ",
+                "lat": 32.496965,
+                "lng": -116.968891
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.505858,-116.964962&destination=32.507271,-116.964137&travelmode=driving"
-          },
-          {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50RMB",
-                "name": "Plaza Quince TIJ",
-                "lat": 32.498045,
-                "lng": -116.964771
-              },
-              {
-                "cr": "50XKA",
-                "name": "Clinica 20 TIJ",
-                "lat": 32.497443,
-                "lng": -116.962997
-              },
-              {
-                "cr": "50WQF",
-                "name": "Alarid TIJ",
-                "lat": 32.497034,
-                "lng": -116.961087
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.498045,-116.964771&destination=32.497034,-116.961087&waypoints=32.497443,-116.962997&travelmode=driving"
-          },
-          {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50KEM",
-                "name": "Emperadores TIJ",
-                "lat": 32.487324,
-                "lng": -116.960932
-              },
-              {
-                "cr": "50W4E",
-                "name": "Ocotlan TIJ",
-                "lat": 32.490361,
-                "lng": -116.957138
-              },
-              {
-                "cr": "50JXC",
-                "name": "Jalisco TIJ",
-                "lat": 32.491893,
-                "lng": -116.955365
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.487324,-116.960932&destination=32.491893,-116.955365&waypoints=32.490361,-116.957138&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.463552,-116.973447&destination=32.496965,-116.968891&waypoints=32.482786,-116.965357&travelmode=driving"
           }
         ]
       },
@@ -242,7 +226,7 @@
         "color": "#1a7f37",
         "bg": "#dafbe1",
         "ct": "#116329",
-        "total": 21,
+        "total": 22,
         "days": [
           {
             "dayNum": 1,
@@ -250,31 +234,31 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50QYZ",
-                "name": "Azuela TIJ",
-                "lat": 32.471492,
-                "lng": -116.949385
+                "cr": "50V6T",
+                "name": "Orquideas",
+                "lat": 32.517262,
+                "lng": -116.968796
               },
               {
-                "cr": "50DQL",
-                "name": "Lomas Verdes TIJ",
-                "lat": 32.472397,
-                "lng": -116.942828
+                "cr": "50OUP",
+                "name": "Poniente TIJ",
+                "lat": 32.509866,
+                "lng": -116.964563
               },
               {
-                "cr": "50EVA",
-                "name": "Breva TIJ",
-                "lat": 32.480092,
-                "lng": -116.939225
+                "cr": "50NRQ",
+                "name": "Cruz Roja TIJ",
+                "lat": 32.507271,
+                "lng": -116.964137
               },
               {
-                "cr": "50S2I",
-                "name": "Beny TIJ",
-                "lat": 32.485109,
-                "lng": -116.941754
+                "cr": "50HZM",
+                "name": "Alamar TIJ",
+                "lat": 32.513215,
+                "lng": -116.961295
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.471492,-116.949385&destination=32.485109,-116.941754&waypoints=32.472397,-116.942828|32.480092,-116.939225&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.517262,-116.968796&destination=32.513215,-116.961295&waypoints=32.509866,-116.964563|32.507271,-116.964137&travelmode=driving"
           },
           {
             "dayNum": 2,
@@ -282,25 +266,31 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50OU7",
-                "name": "Valentin TIJ",
-                "lat": 32.464716,
-                "lng": -116.944597
+                "cr": "50NQP",
+                "name": "Peninsula TIJ",
+                "lat": 32.50542,
+                "lng": -116.954406
               },
               {
-                "cr": "50RV1",
-                "name": "Pablo Neruda TIJ",
-                "lat": 32.463582,
-                "lng": -116.940291
+                "cr": "50ALS",
+                "name": "Alamos TIJ",
+                "lat": 32.509667,
+                "lng": -116.953331
               },
               {
-                "cr": "50SMJ",
-                "name": "LOMA ROJA TIJ",
-                "lat": 32.466147,
-                "lng": -116.937366
+                "cr": "50P8D",
+                "name": "Fernandez TIJ",
+                "lat": 32.51467,
+                "lng": -116.947922
+              },
+              {
+                "cr": "50JON",
+                "name": "Valle Vista TIJ",
+                "lat": 32.519251,
+                "lng": -116.951667
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.464716,-116.944597&destination=32.466147,-116.937366&waypoints=32.463582,-116.940291&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.50542,-116.954406&destination=32.519251,-116.951667&waypoints=32.509667,-116.953331|32.51467,-116.947922&travelmode=driving"
           },
           {
             "dayNum": 3,
@@ -308,19 +298,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "504MX",
-                "name": "Jardines de la Mesa",
-                "lat": 32.46007,
-                "lng": -116.932204
+                "cr": "50PK1",
+                "name": "El Mexicano TIJ",
+                "lat": 32.510911,
+                "lng": -116.961573
               },
               {
-                "cr": "50TWJ",
-                "name": "Contreras TIJ",
-                "lat": 32.462113,
-                "lng": -116.930544
+                "cr": "50F08",
+                "name": "Rio Yaqui TIJ",
+                "lat": 32.512209,
+                "lng": -116.944144
+              },
+              {
+                "cr": "50EWS",
+                "name": "Campos TIJ",
+                "lat": 32.493633,
+                "lng": -116.93098
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.46007,-116.932204&destination=32.462113,-116.930544&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.510911,-116.961573&destination=32.493633,-116.93098&waypoints=32.512209,-116.944144&travelmode=driving"
           },
           {
             "dayNum": 4,
@@ -328,25 +324,25 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50OLR",
-                "name": "Los Reyes TIJ",
-                "lat": 32.453237,
-                "lng": -116.929286
+                "cr": "50ITN",
+                "name": "Insurgentes TIJ",
+                "lat": 32.504822,
+                "lng": -116.952108
               },
               {
-                "cr": "50L6Z",
-                "name": "Estocolmo TIJ",
-                "lat": 32.451739,
-                "lng": -116.927126
+                "cr": "50EKG",
+                "name": "Bolivia TIJ",
+                "lat": 32.493959,
+                "lng": -116.941655
               },
               {
-                "cr": "507YY",
-                "name": "Vibora TIJ",
-                "lat": 32.446037,
-                "lng": -116.924031
+                "cr": "5090I",
+                "name": "Olachea TIJ",
+                "lat": 32.520809,
+                "lng": -116.942192
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.453237,-116.929286&destination=32.446037,-116.924031&waypoints=32.451739,-116.927126&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.504822,-116.952108&destination=32.520809,-116.942192&waypoints=32.493959,-116.941655&travelmode=driving"
           },
           {
             "dayNum": 5,
@@ -354,19 +350,37 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50EV4",
-                "name": "NiloTIJ",
-                "lat": 32.470731,
-                "lng": -116.927643
+                "cr": "50JHF",
+                "name": "Mujica TIJ",
+                "lat": 32.527869,
+                "lng": -116.948075
               },
               {
-                "cr": "50JOW",
-                "name": "Siete TIJ",
-                "lat": 32.468185,
-                "lng": -116.925555
+                "cr": "50ZXH",
+                "name": "Bugambilias TIJ",
+                "lat": 32.531976,
+                "lng": -116.947704
+              },
+              {
+                "cr": "50820",
+                "name": "Rinconada OTAY TIJ",
+                "lat": 32.525541,
+                "lng": -116.942387
+              },
+              {
+                "cr": "50MX7",
+                "name": "Altata TIJ",
+                "lat": 32.525207,
+                "lng": -116.933985
+              },
+              {
+                "cr": "50KUD",
+                "name": "Sinaloa TIJ",
+                "lat": 32.523222,
+                "lng": -116.931416
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.470731,-116.927643&destination=32.468185,-116.925555&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.527869,-116.948075&destination=32.523222,-116.931416&waypoints=32.531976,-116.947704|32.525541,-116.942387|32.525207,-116.933985&travelmode=driving"
           },
           {
             "dayNum": 6,
@@ -374,65 +388,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50PNS",
-                "name": "Pinos TIJ",
-                "lat": 32.464597,
-                "lng": -116.929215
+                "cr": "50ZVJ",
+                "name": "Murua TIJ",
+                "lat": 32.516309,
+                "lng": -116.946584
               },
               {
-                "cr": "50ALZ",
-                "name": "Villas de AlcazarTIJ",
-                "lat": 32.460507,
-                "lng": -116.923221
+                "cr": "50Q70",
+                "name": "San Blas",
+                "lat": 32.521019,
+                "lng": -116.93538
+              },
+              {
+                "cr": "50D0S",
+                "name": "Gran Lago i78",
+                "lat": 32.510213,
+                "lng": -116.932006
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.464597,-116.929215&destination=32.460507,-116.923221&travelmode=driving"
-          },
-          {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50TPR",
-                "name": "Las Presas TIJ",
-                "lat": 32.453213,
-                "lng": -116.922883
-              },
-              {
-                "cr": "502M3",
-                "name": "Flor TIJ",
-                "lat": 32.449414,
-                "lng": -116.918931
-              },
-              {
-                "cr": "50H7H",
-                "name": "Sauco TIJ",
-                "lat": 32.458007,
-                "lng": -116.919121
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.453213,-116.922883&destination=32.458007,-116.919121&waypoints=32.449414,-116.918931&travelmode=driving"
-          },
-          {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50RZS",
-                "name": "Terrazas TIJ",
-                "lat": 32.452304,
-                "lng": -116.918024
-              },
-              {
-                "cr": "5076L",
-                "name": "Pericue TIJ",
-                "lat": 32.449316,
-                "lng": -116.909474
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.452304,-116.918024&destination=32.449316,-116.909474&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.516309,-116.946584&destination=32.510213,-116.932006&waypoints=32.521019,-116.93538&travelmode=driving"
           }
         ]
       },
@@ -450,31 +424,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50TAY",
-                "name": "Otay TIJ",
-                "lat": 32.522981,
-                "lng": -116.97216
+                "cr": "50RMB",
+                "name": "Plaza Quince TIJ",
+                "lat": 32.498045,
+                "lng": -116.964771
               },
               {
-                "cr": "50ERR",
-                "name": "Ferrocarril TIJ",
-                "lat": 32.497605,
-                "lng": -116.95428
+                "cr": "50KEM",
+                "name": "Emperadores TIJ",
+                "lat": 32.487324,
+                "lng": -116.960932
               },
               {
-                "cr": "50UZI",
-                "name": "Rosal TIJ",
-                "lat": 32.494497,
-                "lng": -116.952001
-              },
-              {
-                "cr": "50GBN",
-                "name": "Benton TIJ",
-                "lat": 32.491301,
-                "lng": -116.953539
+                "cr": "50TBL",
+                "name": "Los Parques TIJ",
+                "lat": 32.480149,
+                "lng": -116.960876
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.522981,-116.97216&destination=32.491301,-116.953539&waypoints=32.497605,-116.95428|32.494497,-116.952001&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.498045,-116.964771&destination=32.480149,-116.960876&waypoints=32.487324,-116.960932&travelmode=driving"
           },
           {
             "dayNum": 2,
@@ -482,16 +450,16 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50SYD",
-                "name": "Cascadas TIJ",
-                "lat": 32.488536,
-                "lng": -116.950469
+                "cr": "50LWQ",
+                "name": "Legal TIJ",
+                "lat": 32.514596,
+                "lng": -116.983546
               },
               {
-                "cr": "50EZR",
-                "name": "Finisterra TIJ",
-                "lat": 32.491881,
-                "lng": -116.920297
+                "cr": "505HE",
+                "name": "Uxmal TIJ",
+                "lat": 32.519816,
+                "lng": -116.97863
               },
               {
                 "cr": "50MFL",
@@ -500,7 +468,7 @@
                 "lng": -116.913741
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.488536,-116.950469&destination=32.491845,-116.913741&waypoints=32.491881,-116.920297&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.514596,-116.983546&destination=32.491845,-116.913741&waypoints=32.519816,-116.97863&travelmode=driving"
           },
           {
             "dayNum": 3,
@@ -508,19 +476,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "5022L",
-                "name": "Durazno TIJ",
-                "lat": 32.490107,
-                "lng": -116.947019
+                "cr": "50ABI",
+                "name": "Alta Brisa II TIJ",
+                "lat": 32.530478,
+                "lng": -116.977294
               },
               {
-                "cr": "50GUI",
-                "name": "Aguila TIJ",
-                "lat": 32.498748,
-                "lng": -116.904484
+                "cr": "50MJT",
+                "name": "Suchiate TIJ",
+                "lat": 32.505115,
+                "lng": -116.933658
+              },
+              {
+                "cr": "50EZR",
+                "name": "Finisterra TIJ",
+                "lat": 32.491881,
+                "lng": -116.920297
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.490107,-116.947019&destination=32.498748,-116.904484&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.530478,-116.977294&destination=32.491881,-116.920297&waypoints=32.505115,-116.933658&travelmode=driving"
           },
           {
             "dayNum": 4,
@@ -544,9 +518,21 @@
                 "name": "Asadero TIJ",
                 "lat": 32.50963,
                 "lng": -116.912142
+              },
+              {
+                "cr": "5048W",
+                "name": "De la Plata TIJ",
+                "lat": 32.513586,
+                "lng": -116.903235
+              },
+              {
+                "cr": "50RJS",
+                "name": "Jars TIJ",
+                "lat": 32.51182,
+                "lng": -116.897728
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.512545,-116.918207&destination=32.50963,-116.912142&waypoints=32.514575,-116.915425&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.512545,-116.918207&destination=32.51182,-116.897728&waypoints=32.514575,-116.915425|32.50963,-116.912142|32.513586,-116.903235&travelmode=driving"
           },
           {
             "dayNum": 5,
@@ -564,20 +550,6 @@
                 "name": "Halcones TIJ",
                 "lat": 32.498248,
                 "lng": -116.908393
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.49975,-116.908898&destination=32.498248,-116.908393&travelmode=driving"
-          },
-          {
-            "dayNum": 6,
-            "date": "Lun 23 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50CFT",
-                "name": "Comonfort TIJ",
-                "lat": 32.491839,
-                "lng": -116.908704
               },
               {
                 "cr": "50SEQ",
@@ -586,44 +558,30 @@
                 "lng": -116.906497
               },
               {
+                "cr": "50CFT",
+                "name": "Comonfort TIJ",
+                "lat": 32.491839,
+                "lng": -116.908704
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.49975,-116.908898&destination=32.491839,-116.908704&waypoints=32.498248,-116.908393|32.494989,-116.906497&travelmode=driving"
+          },
+          {
+            "dayNum": 6,
+            "date": "Lun 23 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50GUI",
+                "name": "Aguila TIJ",
+                "lat": 32.498748,
+                "lng": -116.904484
+              },
+              {
                 "cr": "50GYZ",
                 "name": "Girasol TIJ",
                 "lat": 32.494593,
                 "lng": -116.901579
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.491839,-116.908704&destination=32.494593,-116.901579&waypoints=32.494989,-116.906497&travelmode=driving"
-          },
-          {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "5048W",
-                "name": "De la Plata TIJ",
-                "lat": 32.513586,
-                "lng": -116.903235
-              },
-              {
-                "cr": "50RJS",
-                "name": "Jars TIJ",
-                "lat": 32.51182,
-                "lng": -116.897728
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.513586,-116.903235&destination=32.51182,-116.897728&travelmode=driving"
-          },
-          {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50EKG",
-                "name": "Bolivia TIJ",
-                "lat": 32.493959,
-                "lng": -116.941655
               },
               {
                 "cr": "50TLF",
@@ -632,7 +590,7 @@
                 "lng": -116.807837
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.493959,-116.941655&destination=32.48888,-116.807837&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.498748,-116.904484&destination=32.48888,-116.807837&waypoints=32.494593,-116.901579&travelmode=driving"
           }
         ]
       },
@@ -642,398 +600,6 @@
         "color": "#6639ba",
         "bg": "#fbefff",
         "ct": "#512a97",
-        "total": 21,
-        "days": [
-          {
-            "dayNum": 1,
-            "date": "Mié 18 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50HDO",
-                "name": "Hipodromo TIJ",
-                "lat": 32.503716,
-                "lng": -116.998753
-              },
-              {
-                "cr": "50GDT",
-                "name": "Santa Barbara TIJ",
-                "lat": 32.505506,
-                "lng": -116.985094
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.503716,-116.998753&destination=32.505506,-116.985094&travelmode=driving"
-          },
-          {
-            "dayNum": 2,
-            "date": "Jue 19 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50XRY",
-                "name": "Espectacular TIJ",
-                "lat": 32.513755,
-                "lng": -116.987638
-              },
-              {
-                "cr": "50SW8",
-                "name": "Neptuno TIJ",
-                "lat": 32.462607,
-                "lng": -116.977378
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.513755,-116.987638&destination=32.462607,-116.977378&travelmode=driving"
-          },
-          {
-            "dayNum": 3,
-            "date": "Vie 20 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50LWQ",
-                "name": "Legal TIJ",
-                "lat": 32.514596,
-                "lng": -116.983546
-              },
-              {
-                "cr": "50VRX",
-                "name": "Via Rapida TIJ",
-                "lat": 32.517172,
-                "lng": -116.981074
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.514596,-116.983546&destination=32.517172,-116.981074&travelmode=driving"
-          },
-          {
-            "dayNum": 4,
-            "date": "Sáb 21 Mar",
-            "isWE": true,
-            "stores": [
-              {
-                "cr": "50TPA",
-                "name": "Industrial II TIJ",
-                "lat": 32.46889,
-                "lng": -116.987227
-              },
-              {
-                "cr": "50L9P",
-                "name": "Baja California TIJ",
-                "lat": 32.469728,
-                "lng": -116.982379
-              },
-              {
-                "cr": "50OG1",
-                "name": "Caspio TIJ",
-                "lat": 32.473717,
-                "lng": -116.978567
-              },
-              {
-                "cr": "50HS9",
-                "name": "Moctezuma TIJ",
-                "lat": 32.476405,
-                "lng": -116.973753
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.46889,-116.987227&destination=32.476405,-116.973753&waypoints=32.469728,-116.982379|32.473717,-116.978567&travelmode=driving"
-          },
-          {
-            "dayNum": 5,
-            "date": "Dom 22 Mar",
-            "isWE": true,
-            "stores": [
-              {
-                "cr": "50VDN",
-                "name": "20 de Noviembre TIJ",
-                "lat": 32.512299,
-                "lng": -116.986826
-              },
-              {
-                "cr": "50HTA",
-                "name": "Sanchez Taboada TIJ",
-                "lat": 32.469099,
-                "lng": -116.972714
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.512299,-116.986826&destination=32.469099,-116.972714&travelmode=driving"
-          },
-          {
-            "dayNum": 6,
-            "date": "Lun 23 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50KM1",
-                "name": "Olivos TIJ",
-                "lat": 32.465754,
-                "lng": -116.981022
-              },
-              {
-                "cr": "50FAL",
-                "name": "Andes TIJ",
-                "lat": 32.420752,
-                "lng": -116.969928
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.465754,-116.981022&destination=32.420752,-116.969928&travelmode=driving"
-          },
-          {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50GHU",
-                "name": "Nayarit TIJ",
-                "lat": 32.463552,
-                "lng": -116.973447
-              },
-              {
-                "cr": "50JM1",
-                "name": "Marte TIJ",
-                "lat": 32.462129,
-                "lng": -116.967119
-              },
-              {
-                "cr": "50JLB",
-                "name": "Omega TIJ",
-                "lat": 32.461514,
-                "lng": -116.963404
-              },
-              {
-                "cr": "501TS",
-                "name": "Ganimides",
-                "lat": 32.457018,
-                "lng": -116.973106
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.463552,-116.973447&destination=32.457018,-116.973106&waypoints=32.462129,-116.967119|32.461514,-116.963404&travelmode=driving"
-          },
-          {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50FB4",
-                "name": "Conquistadores TIJ",
-                "lat": 32.475344,
-                "lng": -116.968412
-              },
-              {
-                "cr": "50EL4",
-                "name": "Selva TIJ",
-                "lat": 32.482786,
-                "lng": -116.965357
-              },
-              {
-                "cr": "50TBL",
-                "name": "Los Parques TIJ",
-                "lat": 32.480149,
-                "lng": -116.960876
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.475344,-116.968412&destination=32.480149,-116.960876&waypoints=32.482786,-116.965357&travelmode=driving"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "Ing. David Flores",
-        "color": "#9a6700",
-        "bg": "#fff8c5",
-        "ct": "#7d4e00",
-        "total": 21,
-        "days": [
-          {
-            "dayNum": 1,
-            "date": "Mié 18 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50OUP",
-                "name": "Poniente TIJ",
-                "lat": 32.509866,
-                "lng": -116.964563
-              },
-              {
-                "cr": "50PK1",
-                "name": "El Mexicano TIJ",
-                "lat": 32.510911,
-                "lng": -116.961573
-              },
-              {
-                "cr": "50HZM",
-                "name": "Alamar TIJ",
-                "lat": 32.513215,
-                "lng": -116.961295
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.509866,-116.964563&destination=32.513215,-116.961295&waypoints=32.510911,-116.961573&travelmode=driving"
-          },
-          {
-            "dayNum": 2,
-            "date": "Jue 19 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50NQP",
-                "name": "Peninsula TIJ",
-                "lat": 32.50542,
-                "lng": -116.954406
-              },
-              {
-                "cr": "50ITN",
-                "name": "Insurgentes TIJ",
-                "lat": 32.504822,
-                "lng": -116.952108
-              },
-              {
-                "cr": "50ALS",
-                "name": "Alamos TIJ",
-                "lat": 32.509667,
-                "lng": -116.953331
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.50542,-116.954406&destination=32.509667,-116.953331&waypoints=32.504822,-116.952108&travelmode=driving"
-          },
-          {
-            "dayNum": 3,
-            "date": "Vie 20 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50ZXH",
-                "name": "Bugambilias TIJ",
-                "lat": 32.531976,
-                "lng": -116.947704
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=32.531976,-116.947704"
-          },
-          {
-            "dayNum": 4,
-            "date": "Sáb 21 Mar",
-            "isWE": true,
-            "stores": [
-              {
-                "cr": "50JON",
-                "name": "Valle Vista TIJ",
-                "lat": 32.519251,
-                "lng": -116.951667
-              },
-              {
-                "cr": "50ZVJ",
-                "name": "Murua TIJ",
-                "lat": 32.516309,
-                "lng": -116.946584
-              },
-              {
-                "cr": "50P8D",
-                "name": "Fernandez TIJ",
-                "lat": 32.51467,
-                "lng": -116.947922
-              },
-              {
-                "cr": "50F08",
-                "name": "Rio Yaqui TIJ",
-                "lat": 32.512209,
-                "lng": -116.944144
-              },
-              {
-                "cr": "5090I",
-                "name": "Olachea TIJ",
-                "lat": 32.520809,
-                "lng": -116.942192
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.519251,-116.951667&destination=32.520809,-116.942192&waypoints=32.516309,-116.946584|32.51467,-116.947922|32.512209,-116.944144&travelmode=driving"
-          },
-          {
-            "dayNum": 5,
-            "date": "Dom 22 Mar",
-            "isWE": true,
-            "stores": [
-              {
-                "cr": "50JHF",
-                "name": "Mujica TIJ",
-                "lat": 32.527869,
-                "lng": -116.948075
-              },
-              {
-                "cr": "50820",
-                "name": "Rinconada OTAY TIJ",
-                "lat": 32.525541,
-                "lng": -116.942387
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.527869,-116.948075&destination=32.525541,-116.942387&travelmode=driving"
-          },
-          {
-            "dayNum": 6,
-            "date": "Lun 23 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50Q70",
-                "name": "San Blas",
-                "lat": 32.521019,
-                "lng": -116.93538
-              },
-              {
-                "cr": "50MX7",
-                "name": "Altata TIJ",
-                "lat": 32.525207,
-                "lng": -116.933985
-              },
-              {
-                "cr": "50KUD",
-                "name": "Sinaloa TIJ",
-                "lat": 32.523222,
-                "lng": -116.931416
-              },
-              {
-                "cr": "50F9X",
-                "name": "Balcones TIJ",
-                "lat": 32.535302,
-                "lng": -116.935379
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.521019,-116.93538&destination=32.535302,-116.935379&waypoints=32.525207,-116.933985|32.523222,-116.931416&travelmode=driving"
-          },
-          {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50MJT",
-                "name": "Suchiate TIJ",
-                "lat": 32.505115,
-                "lng": -116.933658
-              },
-              {
-                "cr": "50D0S",
-                "name": "Gran Lago i78",
-                "lat": 32.510213,
-                "lng": -116.932006
-              },
-              {
-                "cr": "50EWS",
-                "name": "Campos TIJ",
-                "lat": 32.493633,
-                "lng": -116.93098
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.505115,-116.933658&destination=32.493633,-116.93098&waypoints=32.510213,-116.932006&travelmode=driving"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "name": "Ing. Jairo Montes",
-        "color": "#c9393e",
-        "bg": "#ffebe9",
-        "ct": "#a40e26",
         "total": 22,
         "days": [
           {
@@ -1068,26 +634,6 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50QFZ",
-                "name": "Sonoita TIJ",
-                "lat": 32.51291,
-                "lng": -117.012564
-              },
-              {
-                "cr": "50RUX",
-                "name": "Chapultepec TIJ",
-                "lat": 32.505041,
-                "lng": -117.007306
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.51291,-117.012564&destination=32.505041,-117.007306&travelmode=driving"
-          },
-          {
-            "dayNum": 3,
-            "date": "Vie 20 Mar",
-            "isWE": false,
-            "stores": [
-              {
                 "cr": "50LU3",
                 "name": "Dominguez TIJ",
                 "lat": 32.539793,
@@ -1106,13 +652,45 @@
                 "lng": -117.008626
               },
               {
+                "cr": "50E06",
+                "name": "General TIJ",
+                "lat": 32.527225,
+                "lng": -117.010191
+              },
+              {
                 "cr": "50BJX",
                 "name": "Velasco TIJ",
                 "lat": 32.540009,
                 "lng": -117.003215
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539793,-117.011349&destination=32.540009,-117.003215&waypoints=32.534603,-117.009537|32.533236,-117.008626&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539793,-117.011349&destination=32.540009,-117.003215&waypoints=32.534603,-117.009537|32.533236,-117.008626|32.527225,-117.010191&travelmode=driving"
+          },
+          {
+            "dayNum": 3,
+            "date": "Vie 20 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50QFZ",
+                "name": "Sonoita TIJ",
+                "lat": 32.51291,
+                "lng": -117.012564
+              },
+              {
+                "cr": "50RUX",
+                "name": "Chapultepec TIJ",
+                "lat": 32.505041,
+                "lng": -117.007306
+              },
+              {
+                "cr": "50HDO",
+                "name": "Hipodromo TIJ",
+                "lat": 32.503716,
+                "lng": -116.998753
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.51291,-117.012564&destination=32.503716,-116.998753&waypoints=32.505041,-117.007306&travelmode=driving"
           },
           {
             "dayNum": 4,
@@ -1120,31 +698,11 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50E06",
-                "name": "General TIJ",
-                "lat": 32.527225,
-                "lng": -117.010191
-              },
-              {
                 "cr": "50XEI",
                 "name": "Campo Nuevo TIJ",
                 "lat": 32.527824,
                 "lng": -117.006062
               },
-              {
-                "cr": "5085K",
-                "name": "Santa Isabel TIJ",
-                "lat": 32.51984,
-                "lng": -116.990598
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.527225,-117.010191&destination=32.51984,-116.990598&waypoints=32.527824,-117.006062&travelmode=driving"
-          },
-          {
-            "dayNum": 5,
-            "date": "Dom 22 Mar",
-            "isWE": true,
-            "stores": [
               {
                 "cr": "505UD",
                 "name": "Evaristo TIJ",
@@ -1152,24 +710,18 @@
                 "lng": -117.000092
               },
               {
-                "cr": "50TOP",
-                "name": "Postal TIJ",
-                "lat": 32.524185,
-                "lng": -116.997751
-              },
-              {
-                "cr": "509Y0",
-                "name": "Carlota TIJ",
-                "lat": 32.530778,
-                "lng": -116.992996
+                "cr": "50SMK",
+                "name": "Militar TIJ",
+                "lat": 32.528353,
+                "lng": -116.988432
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.527257,-117.000092&destination=32.530778,-116.992996&waypoints=32.524185,-116.997751&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.527824,-117.006062&destination=32.528353,-116.988432&waypoints=32.527257,-117.000092&travelmode=driving"
           },
           {
-            "dayNum": 6,
-            "date": "Lun 23 Mar",
-            "isWE": false,
+            "dayNum": 5,
+            "date": "Dom 22 Mar",
+            "isWE": true,
             "stores": [
               {
                 "cr": "504SI",
@@ -1178,19 +730,37 @@
                 "lng": -116.998815
               },
               {
-                "cr": "50CNO",
-                "name": "Juan Ojeda TIJ",
-                "lat": 32.519521,
-                "lng": -116.982462
+                "cr": "509Y0",
+                "name": "Carlota TIJ",
+                "lat": 32.530778,
+                "lng": -116.992996
+              },
+              {
+                "cr": "50OK3",
+                "name": "Pasteje",
+                "lat": 32.53282,
+                "lng": -116.988127
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539071,-116.998815&destination=32.519521,-116.982462&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539071,-116.998815&destination=32.53282,-116.988127&waypoints=32.530778,-116.992996&travelmode=driving"
           },
           {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
+            "dayNum": 6,
+            "date": "Lun 23 Mar",
             "isWE": false,
             "stores": [
+              {
+                "cr": "50TOP",
+                "name": "Postal TIJ",
+                "lat": 32.524185,
+                "lng": -116.997751
+              },
+              {
+                "cr": "5085K",
+                "name": "Santa Isabel TIJ",
+                "lat": 32.51984,
+                "lng": -116.990598
+              },
               {
                 "cr": "50CKO",
                 "name": "Buena Vista TIJ",
@@ -1198,48 +768,28 @@
                 "lng": -116.986889
               },
               {
-                "cr": "50ZCH",
-                "name": "Salmon TIJ",
-                "lat": 32.521719,
-                "lng": -116.985969
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.521381,-116.986889&destination=32.521719,-116.985969&travelmode=driving"
-          },
-          {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50SMK",
-                "name": "Militar TIJ",
-                "lat": 32.528353,
-                "lng": -116.988432
+                "cr": "50XRY",
+                "name": "Espectacular TIJ",
+                "lat": 32.513755,
+                "lng": -116.987638
               },
               {
-                "cr": "50OK3",
-                "name": "Pasteje",
-                "lat": 32.53282,
-                "lng": -116.988127
-              },
-              {
-                "cr": "50TEN",
-                "name": "Tecnologico TIJ",
-                "lat": 32.529353,
-                "lng": -116.981697
+                "cr": "50VDN",
+                "name": "20 de Noviembre TIJ",
+                "lat": 32.512299,
+                "lng": -116.986826
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.528353,-116.988432&destination=32.529353,-116.981697&waypoints=32.53282,-116.988127&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.524185,-116.997751&destination=32.512299,-116.986826&waypoints=32.51984,-116.990598|32.521381,-116.986889|32.513755,-116.987638&travelmode=driving"
           }
         ]
       },
       {
-        "id": 6,
-        "name": "ATI",
-        "color": "#0891b2",
-        "bg": "#ecfeff",
-        "ct": "#0e7490",
+        "id": 4,
+        "name": "Ing. David Flores",
+        "color": "#9a6700",
+        "bg": "#fff8c5",
+        "ct": "#7d4e00",
         "total": 21,
         "days": [
           {
@@ -1254,10 +804,10 @@
                 "lng": -116.982041
               },
               {
-                "cr": "50ABI",
-                "name": "Alta Brisa II TIJ",
-                "lat": 32.530478,
-                "lng": -116.977294
+                "cr": "50TEN",
+                "name": "Tecnologico TIJ",
+                "lat": 32.529353,
+                "lng": -116.981697
               },
               {
                 "cr": "50YKF",
@@ -1265,20 +815,6 @@
                 "lat": 32.529347,
                 "lng": -116.973828
               },
-              {
-                "cr": "50ATV",
-                "name": "Alta Brisa TIJ",
-                "lat": 32.530208,
-                "lng": -116.970824
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.533406,-116.982041&destination=32.530208,-116.970824&waypoints=32.530478,-116.977294|32.529347,-116.973828&travelmode=driving"
-          },
-          {
-            "dayNum": 2,
-            "date": "Jue 19 Mar",
-            "isWE": false,
-            "stores": [
               {
                 "cr": "50X1H",
                 "name": "Mimihuapan TIJ",
@@ -1292,7 +828,33 @@
                 "lng": -116.973185
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.534905,-116.975741&destination=32.546268,-116.973185&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.533406,-116.982041&destination=32.546268,-116.973185&waypoints=32.529353,-116.981697|32.529347,-116.973828|32.534905,-116.975741&travelmode=driving"
+          },
+          {
+            "dayNum": 2,
+            "date": "Jue 19 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50DI8",
+                "name": "Datileros TIJ",
+                "lat": 32.50319,
+                "lng": -116.968646
+              },
+              {
+                "cr": "50WZX",
+                "name": "Solorza TIJ",
+                "lat": 32.499673,
+                "lng": -116.967285
+              },
+              {
+                "cr": "50YKH",
+                "name": "Navarrete TIJ",
+                "lat": 32.505858,
+                "lng": -116.964962
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.50319,-116.968646&destination=32.505858,-116.964962&waypoints=32.499673,-116.967285&travelmode=driving"
           },
           {
             "dayNum": 3,
@@ -1300,19 +862,25 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "505HE",
-                "name": "Uxmal TIJ",
-                "lat": 32.519816,
-                "lng": -116.97863
+                "cr": "50ZCH",
+                "name": "Salmon TIJ",
+                "lat": 32.521719,
+                "lng": -116.985969
               },
               {
-                "cr": "50GHH",
-                "name": "Chevigas TIJ",
-                "lat": 32.536865,
-                "lng": -116.903612
+                "cr": "50TAY",
+                "name": "Otay TIJ",
+                "lat": 32.522981,
+                "lng": -116.97216
+              },
+              {
+                "cr": "50DUL",
+                "name": "Modulos TIJ",
+                "lat": 32.549214,
+                "lng": -116.92468
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.519816,-116.97863&destination=32.536865,-116.903612&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.521719,-116.985969&destination=32.549214,-116.92468&waypoints=32.522981,-116.97216&travelmode=driving"
           },
           {
             "dayNum": 4,
@@ -1320,19 +888,25 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50QXL",
-                "name": "Toluca TIJ",
-                "lat": 32.531761,
-                "lng": -116.928437
+                "cr": "50ATV",
+                "name": "Alta Brisa TIJ",
+                "lat": 32.530208,
+                "lng": -116.970824
               },
               {
-                "cr": "504YH",
-                "name": "Parker TIJ",
-                "lat": 32.541542,
-                "lng": -116.918561
+                "cr": "50R6B",
+                "name": "Cardinal Health",
+                "lat": 32.53199,
+                "lng": -116.923553
+              },
+              {
+                "cr": "50RUM",
+                "name": "Centrum TIJ",
+                "lat": 32.537686,
+                "lng": -116.919887
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.531761,-116.928437&destination=32.541542,-116.918561&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.530208,-116.970824&destination=32.537686,-116.919887&waypoints=32.53199,-116.923553&travelmode=driving"
           },
           {
             "dayNum": 5,
@@ -1340,10 +914,16 @@
             "isWE": true,
             "stores": [
               {
-                "cr": "50RUM",
-                "name": "Centrum TIJ",
-                "lat": 32.537686,
-                "lng": -116.919887
+                "cr": "50F9X",
+                "name": "Balcones TIJ",
+                "lat": 32.535302,
+                "lng": -116.935379
+              },
+              {
+                "cr": "50QXL",
+                "name": "Toluca TIJ",
+                "lat": 32.531761,
+                "lng": -116.928437
               },
               {
                 "cr": "50INL",
@@ -1352,7 +932,7 @@
                 "lng": -116.919103
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.537686,-116.919887&destination=32.537795,-116.919103&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.535302,-116.935379&destination=32.537795,-116.919103&waypoints=32.531761,-116.928437&travelmode=driving"
           },
           {
             "dayNum": 6,
@@ -1360,10 +940,10 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50DUL",
-                "name": "Modulos TIJ",
-                "lat": 32.549214,
-                "lng": -116.92468
+                "cr": "504YH",
+                "name": "Parker TIJ",
+                "lat": 32.541542,
+                "lng": -116.918561
               },
               {
                 "cr": "50UUJ",
@@ -1384,44 +964,326 @@
                 "lng": -116.909732
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.549214,-116.92468&destination=32.545668,-116.909732&waypoints=32.539174,-116.914596|32.538885,-116.91349&travelmode=driving"
-          },
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.541542,-116.918561&destination=32.545668,-116.909732&waypoints=32.539174,-116.914596|32.538885,-116.91349&travelmode=driving"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Ing. Jairo Montes",
+        "color": "#c9393e",
+        "bg": "#ffebe9",
+        "ct": "#a40e26",
+        "total": 21,
+        "days": [
           {
-            "dayNum": 7,
-            "date": "Mar 24 Mar",
+            "dayNum": 1,
+            "date": "Mié 18 Mar",
             "isWE": false,
             "stores": [
               {
-                "cr": "50R6B",
-                "name": "Cardinal Health",
-                "lat": 32.53199,
-                "lng": -116.923553
-              },
-              {
-                "cr": "501ZP",
-                "name": "Ejidatarios TIJ",
-                "lat": 32.535969,
-                "lng": -116.901551
+                "cr": "50FAL",
+                "name": "Andes TIJ",
+                "lat": 32.420752,
+                "lng": -116.969928
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.53199,-116.923553&destination=32.535969,-116.901551&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=32.420752,-116.969928"
           },
           {
-            "dayNum": 8,
-            "date": "Mié 25 Mar",
+            "dayNum": 2,
+            "date": "Jue 19 Mar",
             "isWE": false,
             "stores": [
               {
-                "cr": "50GHL",
-                "name": "Chilpancingo TIJ",
-                "lat": 32.529876,
-                "lng": -116.900222
+                "cr": "50QYZ",
+                "name": "Azuela TIJ",
+                "lat": 32.471492,
+                "lng": -116.949385
+              },
+              {
+                "cr": "50DQL",
+                "name": "Lomas Verdes TIJ",
+                "lat": 32.472397,
+                "lng": -116.942828
+              },
+              {
+                "cr": "50EVA",
+                "name": "Breva TIJ",
+                "lat": 32.480092,
+                "lng": -116.939225
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.471492,-116.949385&destination=32.480092,-116.939225&waypoints=32.472397,-116.942828&travelmode=driving"
+          },
+          {
+            "dayNum": 3,
+            "date": "Vie 20 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50OU7",
+                "name": "Valentin TIJ",
+                "lat": 32.464716,
+                "lng": -116.944597
+              },
+              {
+                "cr": "50RV1",
+                "name": "Pablo Neruda TIJ",
+                "lat": 32.463582,
+                "lng": -116.940291
+              },
+              {
+                "cr": "50SMJ",
+                "name": "LOMA ROJA TIJ",
+                "lat": 32.466147,
+                "lng": -116.937366
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.464716,-116.944597&destination=32.466147,-116.937366&waypoints=32.463582,-116.940291&travelmode=driving"
+          },
+          {
+            "dayNum": 4,
+            "date": "Sáb 21 Mar",
+            "isWE": true,
+            "stores": [
+              {
+                "cr": "504MX",
+                "name": "Jardines de la Mesa",
+                "lat": 32.46007,
+                "lng": -116.932204
+              },
+              {
+                "cr": "50TWJ",
+                "name": "Contreras TIJ",
+                "lat": 32.462113,
+                "lng": -116.930544
+              },
+              {
+                "cr": "50PNS",
+                "name": "Pinos TIJ",
+                "lat": 32.464597,
+                "lng": -116.929215
+              },
+              {
+                "cr": "50JOW",
+                "name": "Siete TIJ",
+                "lat": 32.468185,
+                "lng": -116.925555
+              },
+              {
+                "cr": "50EV4",
+                "name": "NiloTIJ",
+                "lat": 32.470731,
+                "lng": -116.927643
+              },
+              {
+                "cr": "50ALZ",
+                "name": "Villas de AlcazarTIJ",
+                "lat": 32.460507,
+                "lng": -116.923221
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.46007,-116.932204&destination=32.460507,-116.923221&waypoints=32.462113,-116.930544|32.464597,-116.929215|32.468185,-116.925555|32.470731,-116.927643&travelmode=driving"
+          },
+          {
+            "dayNum": 5,
+            "date": "Dom 22 Mar",
+            "isWE": true,
+            "stores": [
+              {
+                "cr": "50OLR",
+                "name": "Los Reyes TIJ",
+                "lat": 32.453237,
+                "lng": -116.929286
+              },
+              {
+                "cr": "50L6Z",
+                "name": "Estocolmo TIJ",
+                "lat": 32.451739,
+                "lng": -116.927126
+              },
+              {
+                "cr": "50TPR",
+                "name": "Las Presas TIJ",
+                "lat": 32.453213,
+                "lng": -116.922883
+              },
+              {
+                "cr": "50RZS",
+                "name": "Terrazas TIJ",
+                "lat": 32.452304,
+                "lng": -116.918024
+              },
+              {
+                "cr": "502M3",
+                "name": "Flor TIJ",
+                "lat": 32.449414,
+                "lng": -116.918931
+              },
+              {
+                "cr": "507YY",
+                "name": "Vibora TIJ",
+                "lat": 32.446037,
+                "lng": -116.924031
+              },
+              {
+                "cr": "50H7H",
+                "name": "Sauco TIJ",
+                "lat": 32.458007,
+                "lng": -116.919121
+              },
+              {
+                "cr": "5076L",
+                "name": "Pericue TIJ",
+                "lat": 32.449316,
+                "lng": -116.909474
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.453237,-116.929286&destination=32.449316,-116.909474&waypoints=32.451739,-116.927126|32.453213,-116.922883|32.452304,-116.918024|32.449414,-116.918931|32.446037,-116.924031|32.458007,-116.919121&travelmode=driving"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "ATI",
+        "color": "#0891b2",
+        "bg": "#ecfeff",
+        "ct": "#0e7490",
+        "total": 20,
+        "days": [
+          {
+            "dayNum": 1,
+            "date": "Mié 18 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50GDT",
+                "name": "Santa Barbara TIJ",
+                "lat": 32.505506,
+                "lng": -116.985094
+              },
+              {
+                "cr": "50VRX",
+                "name": "Via Rapida TIJ",
+                "lat": 32.517172,
+                "lng": -116.981074
+              },
+              {
+                "cr": "50CNO",
+                "name": "Juan Ojeda TIJ",
+                "lat": 32.519521,
+                "lng": -116.982462
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.505506,-116.985094&destination=32.519521,-116.982462&waypoints=32.517172,-116.981074&travelmode=driving"
+          },
+          {
+            "dayNum": 2,
+            "date": "Jue 19 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50CQF",
+                "name": "Aviles TIJ",
+                "lat": 32.498224,
+                "lng": -116.967867
+              },
+              {
+                "cr": "50WQD",
+                "name": "San Jorge TIJ",
+                "lat": 32.499162,
+                "lng": -116.966333
+              },
+              {
+                "cr": "50XKA",
+                "name": "Clinica 20 TIJ",
+                "lat": 32.497443,
+                "lng": -116.962997
+              },
+              {
+                "cr": "50WQF",
+                "name": "Alarid TIJ",
+                "lat": 32.497034,
+                "lng": -116.961087
+              },
+              {
+                "cr": "50W4E",
+                "name": "Ocotlan TIJ",
+                "lat": 32.490361,
+                "lng": -116.957138
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.498224,-116.967867&destination=32.490361,-116.957138&waypoints=32.499162,-116.966333|32.497443,-116.962997|32.497034,-116.961087&travelmode=driving"
+          },
+          {
+            "dayNum": 3,
+            "date": "Vie 20 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50SYD",
+                "name": "Cascadas TIJ",
+                "lat": 32.488536,
+                "lng": -116.950469
+              },
+              {
+                "cr": "5022L",
+                "name": "Durazno TIJ",
+                "lat": 32.490107,
+                "lng": -116.947019
+              },
+              {
+                "cr": "50S2I",
+                "name": "Beny TIJ",
+                "lat": 32.485109,
+                "lng": -116.941754
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.488536,-116.950469&destination=32.485109,-116.941754&waypoints=32.490107,-116.947019&travelmode=driving"
+          },
+          {
+            "dayNum": 4,
+            "date": "Sáb 21 Mar",
+            "isWE": true,
+            "stores": [
+              {
+                "cr": "50ERR",
+                "name": "Ferrocarril TIJ",
+                "lat": 32.497605,
+                "lng": -116.95428
+              },
+              {
+                "cr": "50GBN",
+                "name": "Benton TIJ",
+                "lat": 32.491301,
+                "lng": -116.953539
               },
               {
                 "cr": "50ZVQ",
                 "name": "Imperial TIJ",
                 "lat": 32.539144,
                 "lng": -116.899547
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497605,-116.95428&destination=32.539144,-116.899547&waypoints=32.491301,-116.953539&travelmode=driving"
+          },
+          {
+            "dayNum": 5,
+            "date": "Dom 22 Mar",
+            "isWE": true,
+            "stores": [
+              {
+                "cr": "50JXC",
+                "name": "Jalisco TIJ",
+                "lat": 32.491893,
+                "lng": -116.955365
+              },
+              {
+                "cr": "50UZI",
+                "name": "Rosal TIJ",
+                "lat": 32.494497,
+                "lng": -116.952001
               },
               {
                 "cr": "5035A",
@@ -1430,11 +1292,37 @@
                 "lng": -116.893351
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.529876,-116.900222&destination=32.537713,-116.893351&waypoints=32.539144,-116.899547&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.491893,-116.955365&destination=32.537713,-116.893351&waypoints=32.494497,-116.952001&travelmode=driving"
+          },
+          {
+            "dayNum": 6,
+            "date": "Lun 23 Mar",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50GHH",
+                "name": "Chevigas TIJ",
+                "lat": 32.536865,
+                "lng": -116.903612
+              },
+              {
+                "cr": "501ZP",
+                "name": "Ejidatarios TIJ",
+                "lat": 32.535969,
+                "lng": -116.901551
+              },
+              {
+                "cr": "50GHL",
+                "name": "Chilpancingo TIJ",
+                "lat": 32.529876,
+                "lng": -116.900222
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.536865,-116.903612&destination=32.529876,-116.900222&waypoints=32.535969,-116.901551&travelmode=driving"
           }
         ]
       }
     ],
-    "generatedAt": "2026-03-18T20:01:48.418Z"
+    "generatedAt": "2026-03-18T20:14:57.079Z"
   }
 }
