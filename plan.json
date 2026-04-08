@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-08T20:08:20.204Z",
+  "pushedAt": "2026-04-08T20:09:49.660Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-02",
@@ -68,31 +68,25 @@
                 "lng": -116.982462
               },
               {
-                "cr": "50LWQ",
-                "name": "Legal TIJ",
-                "lat": 32.514596,
-                "lng": -116.983546
-              },
-              {
-                "cr": "50TAY",
-                "name": "Otay TIJ",
-                "lat": 32.522981,
-                "lng": -116.97216
-              },
-              {
-                "cr": "50RUX",
-                "name": "Chapultepec TIJ",
-                "lat": 32.505041,
-                "lng": -117.007306
+                "cr": "50XRY",
+                "name": "Espectacular TIJ",
+                "lat": 32.513755,
+                "lng": -116.987638
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539793,-117.011349&destination=32.505041,-117.007306&waypoints=32.534603,-117.009537|32.527824,-117.006062|32.539071,-116.998815|32.521719,-116.985969|32.519521,-116.982462|32.514596,-116.983546|32.522981,-116.97216&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539793,-117.011349&destination=32.513755,-116.987638&waypoints=32.534603,-117.009537|32.527824,-117.006062|32.539071,-116.998815|32.521719,-116.985969|32.519521,-116.982462&travelmode=driving"
           },
           {
             "dayNum": 2,
             "date": "Vie 3 Abr",
             "isWE": false,
             "stores": [
+              {
+                "cr": "50RUX",
+                "name": "Chapultepec TIJ",
+                "lat": 32.505041,
+                "lng": -117.007306
+              },
               {
                 "cr": "50XEE",
                 "name": "Corregidora TIJ",
@@ -112,16 +106,22 @@
                 "lng": -116.978965
               },
               {
+                "cr": "50LWQ",
+                "name": "Legal TIJ",
+                "lat": 32.514596,
+                "lng": -116.983546
+              },
+              {
                 "cr": "50VDN",
                 "name": "20 de Noviembre TIJ",
                 "lat": 32.512299,
                 "lng": -116.986826
               },
               {
-                "cr": "50XRY",
-                "name": "Espectacular TIJ",
-                "lat": 32.513755,
-                "lng": -116.987638
+                "cr": "50TAY",
+                "name": "Otay TIJ",
+                "lat": 32.522981,
+                "lng": -116.97216
               },
               {
                 "cr": "50KM1",
@@ -136,7 +136,7 @@
                 "lng": -116.973106
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497581,-116.990418&destination=32.457018,-116.973106&waypoints=32.505506,-116.985094|32.505946,-116.978965|32.512299,-116.986826|32.513755,-116.987638|32.465754,-116.981022&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.505041,-117.007306&destination=32.457018,-116.973106&waypoints=32.497581,-116.990418|32.505506,-116.985094|32.505946,-116.978965|32.514596,-116.983546|32.512299,-116.986826|32.522981,-116.97216|32.465754,-116.981022&travelmode=driving"
           }
         ]
       },
@@ -146,7 +146,7 @@
         "color": "#1a7f37",
         "bg": "#dafbe1",
         "ct": "#116329",
-        "total": 17,
+        "total": 16,
         "days": [
           {
             "dayNum": 1,
@@ -158,12 +158,6 @@
                 "name": "Bugambilias TIJ",
                 "lat": 32.531976,
                 "lng": -116.947704
-              },
-              {
-                "cr": "50Q70",
-                "name": "San Blas",
-                "lat": 32.521019,
-                "lng": -116.93538
               },
               {
                 "cr": "50QXL",
@@ -208,7 +202,7 @@
                 "lng": -116.900222
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.531976,-116.947704&destination=32.529876,-116.900222&waypoints=32.521019,-116.93538|32.531761,-116.928437|32.541542,-116.918561|32.545668,-116.909732|32.536865,-116.903612|32.535969,-116.901551|32.539144,-116.899547&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.531976,-116.947704&destination=32.529876,-116.900222&waypoints=32.531761,-116.928437|32.541542,-116.918561|32.545668,-116.909732|32.536865,-116.903612|32.535969,-116.901551|32.539144,-116.899547&travelmode=driving"
           },
           {
             "dayNum": 2,
@@ -385,6 +379,6 @@
         ]
       }
     ],
-    "generatedAt": "2026-04-08T20:08:19.045Z"
+    "generatedAt": "2026-04-08T20:09:48.678Z"
   }
 }
