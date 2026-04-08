@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-08T21:07:55.878Z",
+  "pushedAt": "2026-04-08T21:11:41.998Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-02",
@@ -21,6 +21,164 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
+        "total": 22,
+        "days": [
+          {
+            "dayNum": 1,
+            "date": "Jue 2 Abr",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "50XKA",
+                "name": "Clinica 20 TIJ",
+                "lat": 32.497443,
+                "lng": -116.962997
+              },
+              {
+                "cr": "50SYD",
+                "name": "Cascadas TIJ",
+                "lat": 32.488536,
+                "lng": -116.950469
+              },
+              {
+                "cr": "50EVA",
+                "name": "Breva TIJ",
+                "lat": 32.480092,
+                "lng": -116.939225
+              },
+              {
+                "cr": "50OU7",
+                "name": "Valentin TIJ",
+                "lat": 32.464716,
+                "lng": -116.944597
+              },
+              {
+                "cr": "50PNS",
+                "name": "Pinos TIJ",
+                "lat": 32.464597,
+                "lng": -116.929215
+              },
+              {
+                "cr": "50JOW",
+                "name": "Siete TIJ",
+                "lat": 32.468185,
+                "lng": -116.925555
+              },
+              {
+                "cr": "50EZR",
+                "name": "Finisterra TIJ",
+                "lat": 32.491881,
+                "lng": -116.920297
+              },
+              {
+                "cr": "50CFT",
+                "name": "Comonfort TIJ",
+                "lat": 32.491839,
+                "lng": -116.908704
+              },
+              {
+                "cr": "50SEQ",
+                "name": "Sequoia TIJ",
+                "lat": 32.494989,
+                "lng": -116.906497
+              },
+              {
+                "cr": "50WIM",
+                "name": "Halcones TIJ",
+                "lat": 32.498248,
+                "lng": -116.908393
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497443,-116.962997&destination=32.498248,-116.908393&waypoints=32.488536,-116.950469|32.480092,-116.939225|32.464716,-116.944597|32.464597,-116.929215|32.468185,-116.925555|32.491881,-116.920297|32.491839,-116.908704|32.494989,-116.906497&travelmode=driving"
+          },
+          {
+            "dayNum": 2,
+            "date": "Vie 3 Abr",
+            "isWE": false,
+            "stores": [
+              {
+                "cr": "504YH",
+                "name": "Parker TIJ",
+                "lat": 32.541542,
+                "lng": -116.918561
+              },
+              {
+                "cr": "50LWW",
+                "name": "Silva TIJ",
+                "lat": 32.545668,
+                "lng": -116.909732
+              },
+              {
+                "cr": "50GHH",
+                "name": "Chevigas TIJ",
+                "lat": 32.536865,
+                "lng": -116.903612
+              },
+              {
+                "cr": "501ZP",
+                "name": "Ejidatarios TIJ",
+                "lat": 32.535969,
+                "lng": -116.901551
+              },
+              {
+                "cr": "50ZVQ",
+                "name": "Imperial TIJ",
+                "lat": 32.539144,
+                "lng": -116.899547
+              },
+              {
+                "cr": "50GHL",
+                "name": "Chilpancingo TIJ",
+                "lat": 32.529876,
+                "lng": -116.900222
+              },
+              {
+                "cr": "5048W",
+                "name": "De la Plata TIJ",
+                "lat": 32.513586,
+                "lng": -116.903235
+              },
+              {
+                "cr": "50C8R",
+                "name": "Asadero TIJ",
+                "lat": 32.50963,
+                "lng": -116.912142
+              },
+              {
+                "cr": "509L5",
+                "name": "Marsella TIJ",
+                "lat": 32.514575,
+                "lng": -116.915425
+              },
+              {
+                "cr": "50GUI",
+                "name": "Aguila TIJ",
+                "lat": 32.498748,
+                "lng": -116.904484
+              },
+              {
+                "cr": "50GYZ",
+                "name": "Girasol TIJ",
+                "lat": 32.494593,
+                "lng": -116.901579
+              },
+              {
+                "cr": "50TLF",
+                "name": "Villa Lomas TIJ",
+                "lat": 32.48888,
+                "lng": -116.807837
+              }
+            ],
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.541542,-116.918561&destination=32.48888,-116.807837&waypoints=32.545668,-116.909732|32.536865,-116.903612|32.535969,-116.901551|32.539144,-116.899547|32.529876,-116.900222|32.513586,-116.903235|32.50963,-116.912142|32.514575,-116.915425&travelmode=driving"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "PFS 2",
+        "color": "#1a7f37",
+        "bg": "#dafbe1",
+        "ct": "#116329",
         "total": 23,
         "days": [
           {
@@ -178,166 +336,8 @@
             "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497581,-116.990418&destination=32.465754,-116.981022&waypoints=32.505506,-116.985094|32.505946,-116.978965|32.500531,-116.969814|32.498045,-116.964771|32.469099,-116.972714|32.463552,-116.973447|32.462129,-116.967119|32.461514,-116.963404&travelmode=driving"
           }
         ]
-      },
-      {
-        "id": 1,
-        "name": "PFS 2",
-        "color": "#1a7f37",
-        "bg": "#dafbe1",
-        "ct": "#116329",
-        "total": 22,
-        "days": [
-          {
-            "dayNum": 1,
-            "date": "Jue 2 Abr",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50XKA",
-                "name": "Clinica 20 TIJ",
-                "lat": 32.497443,
-                "lng": -116.962997
-              },
-              {
-                "cr": "50SYD",
-                "name": "Cascadas TIJ",
-                "lat": 32.488536,
-                "lng": -116.950469
-              },
-              {
-                "cr": "50EVA",
-                "name": "Breva TIJ",
-                "lat": 32.480092,
-                "lng": -116.939225
-              },
-              {
-                "cr": "50OU7",
-                "name": "Valentin TIJ",
-                "lat": 32.464716,
-                "lng": -116.944597
-              },
-              {
-                "cr": "50PNS",
-                "name": "Pinos TIJ",
-                "lat": 32.464597,
-                "lng": -116.929215
-              },
-              {
-                "cr": "50JOW",
-                "name": "Siete TIJ",
-                "lat": 32.468185,
-                "lng": -116.925555
-              },
-              {
-                "cr": "50GHL",
-                "name": "Chilpancingo TIJ",
-                "lat": 32.529876,
-                "lng": -116.900222
-              },
-              {
-                "cr": "501ZP",
-                "name": "Ejidatarios TIJ",
-                "lat": 32.535969,
-                "lng": -116.901551
-              },
-              {
-                "cr": "50GHH",
-                "name": "Chevigas TIJ",
-                "lat": 32.536865,
-                "lng": -116.903612
-              },
-              {
-                "cr": "50ZVQ",
-                "name": "Imperial TIJ",
-                "lat": 32.539144,
-                "lng": -116.899547
-              },
-              {
-                "cr": "50LWW",
-                "name": "Silva TIJ",
-                "lat": 32.545668,
-                "lng": -116.909732
-              },
-              {
-                "cr": "504YH",
-                "name": "Parker TIJ",
-                "lat": 32.541542,
-                "lng": -116.918561
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.497443,-116.962997&destination=32.541542,-116.918561&waypoints=32.488536,-116.950469|32.480092,-116.939225|32.464716,-116.944597|32.464597,-116.929215|32.468185,-116.925555|32.529876,-116.900222|32.535969,-116.901551|32.536865,-116.903612&travelmode=driving"
-          },
-          {
-            "dayNum": 2,
-            "date": "Vie 3 Abr",
-            "isWE": false,
-            "stores": [
-              {
-                "cr": "50EZR",
-                "name": "Finisterra TIJ",
-                "lat": 32.491881,
-                "lng": -116.920297
-              },
-              {
-                "cr": "50CFT",
-                "name": "Comonfort TIJ",
-                "lat": 32.491839,
-                "lng": -116.908704
-              },
-              {
-                "cr": "50SEQ",
-                "name": "Sequoia TIJ",
-                "lat": 32.494989,
-                "lng": -116.906497
-              },
-              {
-                "cr": "50WIM",
-                "name": "Halcones TIJ",
-                "lat": 32.498248,
-                "lng": -116.908393
-              },
-              {
-                "cr": "50GUI",
-                "name": "Aguila TIJ",
-                "lat": 32.498748,
-                "lng": -116.904484
-              },
-              {
-                "cr": "50GYZ",
-                "name": "Girasol TIJ",
-                "lat": 32.494593,
-                "lng": -116.901579
-              },
-              {
-                "cr": "50C8R",
-                "name": "Asadero TIJ",
-                "lat": 32.50963,
-                "lng": -116.912142
-              },
-              {
-                "cr": "509L5",
-                "name": "Marsella TIJ",
-                "lat": 32.514575,
-                "lng": -116.915425
-              },
-              {
-                "cr": "5048W",
-                "name": "De la Plata TIJ",
-                "lat": 32.513586,
-                "lng": -116.903235
-              },
-              {
-                "cr": "50TLF",
-                "name": "Villa Lomas TIJ",
-                "lat": 32.48888,
-                "lng": -116.807837
-              }
-            ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.491881,-116.920297&destination=32.48888,-116.807837&waypoints=32.491839,-116.908704|32.494989,-116.906497|32.498248,-116.908393|32.498748,-116.904484|32.494593,-116.901579|32.50963,-116.912142|32.514575,-116.915425|32.513586,-116.903235&travelmode=driving"
-          }
-        ]
       }
     ],
-    "generatedAt": "2026-04-08T21:07:54.716Z"
+    "generatedAt": "2026-04-08T21:11:41.165Z"
   }
 }
