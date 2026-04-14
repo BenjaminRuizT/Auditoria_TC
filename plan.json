@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-14T16:35:52.230Z",
+  "pushedAt": "2026-04-14T20:37:29.482Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-08",
@@ -18,7 +18,7 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
-        "total": 34,
+        "total": 33,
         "days": [
           {
             "dayNum": 1,
@@ -164,12 +164,6 @@
                 "lng": -116.925555
               },
               {
-                "cr": "50EZR",
-                "name": "Finisterra TIJ",
-                "lat": 32.491881,
-                "lng": -116.920297
-              },
-              {
                 "cr": "50CFT",
                 "name": "Comonfort TIJ",
                 "lat": 32.491839,
@@ -235,6 +229,6 @@
         ]
       }
     ],
-    "generatedAt": "2026-04-14T16:35:50.407Z"
+    "generatedAt": "2026-04-14T20:37:28.062Z"
   }
 }
