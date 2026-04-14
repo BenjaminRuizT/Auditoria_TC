@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-13T23:21:18.798Z",
+  "pushedAt": "2026-04-14T16:35:32.309Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-08",
@@ -18,7 +18,7 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
-        "total": 38,
+        "total": 34,
         "days": [
           {
             "dayNum": 1,
@@ -134,24 +134,6 @@
                 "lng": -117.007306
               },
               {
-                "cr": "50KM1",
-                "name": "Olivos TIJ",
-                "lat": 32.465754,
-                "lng": -116.981022
-              },
-              {
-                "cr": "50GHU",
-                "name": "Nayarit TIJ",
-                "lat": 32.463552,
-                "lng": -116.973447
-              },
-              {
-                "cr": "50HTA",
-                "name": "Sanchez Taboada TIJ",
-                "lat": 32.469099,
-                "lng": -116.972714
-              },
-              {
                 "cr": "50JM1",
                 "name": "Marte TIJ",
                 "lat": 32.462129,
@@ -174,12 +156,6 @@
                 "name": "Valentin TIJ",
                 "lat": 32.464716,
                 "lng": -116.944597
-              },
-              {
-                "cr": "50PNS",
-                "name": "Pinos TIJ",
-                "lat": 32.464597,
-                "lng": -116.929215
               },
               {
                 "cr": "50JOW",
@@ -259,6 +235,6 @@
         ]
       }
     ],
-    "generatedAt": "2026-04-13T23:21:17.859Z"
+    "generatedAt": "2026-04-14T16:35:26.502Z"
   }
 }
