@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-15T18:01:51.245Z",
+  "pushedAt": "2026-04-15T18:04:33.166Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-08",
@@ -18,7 +18,7 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
-        "total": 30,
+        "total": 24,
         "days": [
           {
             "dayNum": 1,
@@ -98,18 +98,6 @@
                 "lng": -116.969814
               },
               {
-                "cr": "50RMB",
-                "name": "Plaza Quince TIJ",
-                "lat": 32.498045,
-                "lng": -116.964771
-              },
-              {
-                "cr": "50XKA",
-                "name": "Clinica 20 TIJ",
-                "lat": 32.497443,
-                "lng": -116.962997
-              },
-              {
                 "cr": "50NRQ",
                 "name": "Cruz Roja TIJ",
                 "lat": 32.507271,
@@ -134,22 +122,10 @@
                 "lng": -117.007306
               },
               {
-                "cr": "50JM1",
-                "name": "Marte TIJ",
-                "lat": 32.462129,
-                "lng": -116.967119
-              },
-              {
-                "cr": "50JLB",
-                "name": "Omega TIJ",
-                "lat": 32.461514,
-                "lng": -116.963404
-              },
-              {
-                "cr": "501TS",
-                "name": "Ganimides",
-                "lat": 32.457018,
-                "lng": -116.973106
+                "cr": "50SYD",
+                "name": "Cascadas TIJ",
+                "lat": 32.488536,
+                "lng": -116.950469
               },
               {
                 "cr": "50OU7",
@@ -158,28 +134,16 @@
                 "lng": -116.944597
               },
               {
-                "cr": "50JOW",
-                "name": "Siete TIJ",
-                "lat": 32.468185,
-                "lng": -116.925555
-              },
-              {
-                "cr": "50SYD",
-                "name": "Cascadas TIJ",
-                "lat": 32.488536,
-                "lng": -116.950469
+                "cr": "50C8R",
+                "name": "Asadero TIJ",
+                "lat": 32.50963,
+                "lng": -116.912142
               },
               {
                 "cr": "509L5",
                 "name": "Marsella TIJ",
                 "lat": 32.514575,
                 "lng": -116.915425
-              },
-              {
-                "cr": "50C8R",
-                "name": "Asadero TIJ",
-                "lat": 32.50963,
-                "lng": -116.912142
               },
               {
                 "cr": "5048W",
@@ -211,6 +175,6 @@
         ]
       }
     ],
-    "generatedAt": "2026-04-15T18:01:49.752Z"
+    "generatedAt": "2026-04-15T18:04:32.186Z"
   }
 }
