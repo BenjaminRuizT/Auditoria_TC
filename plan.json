@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-15T18:06:17.322Z",
+  "pushedAt": "2026-04-15T20:08:29.679Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-08",
@@ -18,7 +18,7 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
-        "total": 24,
+        "total": 23,
         "days": [
           {
             "dayNum": 1,
@@ -98,18 +98,6 @@
                 "lng": -116.969814
               },
               {
-                "cr": "50NRQ",
-                "name": "Cruz Roja TIJ",
-                "lat": 32.507271,
-                "lng": -116.964137
-              },
-              {
-                "cr": "50TAY",
-                "name": "Otay TIJ",
-                "lat": 32.522981,
-                "lng": -116.97216
-              },
-              {
                 "cr": "50XEE",
                 "name": "Corregidora TIJ",
                 "lat": 32.497581,
@@ -120,6 +108,12 @@
                 "name": "Chapultepec TIJ",
                 "lat": 32.505041,
                 "lng": -117.007306
+              },
+              {
+                "cr": "50TAY",
+                "name": "Otay TIJ",
+                "lat": 32.522981,
+                "lng": -116.97216
               },
               {
                 "cr": "50SYD",
@@ -175,6 +169,6 @@
         ]
       }
     ],
-    "generatedAt": "2026-04-15T18:06:16.008Z"
+    "generatedAt": "2026-04-15T20:08:28.554Z"
   }
 }
