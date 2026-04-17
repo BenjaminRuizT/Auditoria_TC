@@ -1,5 +1,5 @@
 {
-  "pushedAt": "2026-04-15T20:08:34.019Z",
+  "pushedAt": "2026-04-17T19:30:38.230Z",
   "auditName": "Tijuana Centro",
   "cfg": {
     "startDate": "2026-04-08",
@@ -18,7 +18,7 @@
         "color": "#0969da",
         "bg": "#ddf4ff",
         "ct": "#0550ae",
-        "total": 23,
+        "total": 17,
         "days": [
           {
             "dayNum": 1,
@@ -26,46 +26,10 @@
             "isWE": false,
             "stores": [
               {
-                "cr": "50LU3",
-                "name": "Dominguez TIJ",
-                "lat": 32.539793,
-                "lng": -117.011349
-              },
-              {
-                "cr": "50OKV",
-                "name": "Oviedo TIJ",
-                "lat": 32.534603,
-                "lng": -117.009537
-              },
-              {
-                "cr": "50XEI",
-                "name": "Campo Nuevo TIJ",
-                "lat": 32.527824,
-                "lng": -117.006062
-              },
-              {
-                "cr": "504SI",
-                "name": "Emma TIJ",
-                "lat": 32.539071,
-                "lng": -116.998815
-              },
-              {
-                "cr": "50ZCH",
-                "name": "Salmon TIJ",
-                "lat": 32.521719,
-                "lng": -116.985969
-              },
-              {
-                "cr": "50CNO",
-                "name": "Juan Ojeda TIJ",
-                "lat": 32.519521,
-                "lng": -116.982462
-              },
-              {
-                "cr": "50LWQ",
-                "name": "Legal TIJ",
-                "lat": 32.514596,
-                "lng": -116.983546
+                "cr": "50RUX",
+                "name": "Chapultepec TIJ",
+                "lat": 32.505041,
+                "lng": -117.007306
               },
               {
                 "cr": "50VDN",
@@ -74,16 +38,28 @@
                 "lng": -116.986826
               },
               {
-                "cr": "50XRY",
-                "name": "Espectacular TIJ",
-                "lat": 32.513755,
-                "lng": -116.987638
+                "cr": "50LWQ",
+                "name": "Legal TIJ",
+                "lat": 32.514596,
+                "lng": -116.983546
               },
               {
-                "cr": "50GDT",
-                "name": "Santa Barbara TIJ",
-                "lat": 32.505506,
-                "lng": -116.985094
+                "cr": "50CNO",
+                "name": "Juan Ojeda TIJ",
+                "lat": 32.519521,
+                "lng": -116.982462
+              },
+              {
+                "cr": "50ZCH",
+                "name": "Salmon TIJ",
+                "lat": 32.521719,
+                "lng": -116.985969
+              },
+              {
+                "cr": "50TAY",
+                "name": "Otay TIJ",
+                "lat": 32.522981,
+                "lng": -116.97216
               },
               {
                 "cr": "50OWP",
@@ -92,28 +68,16 @@
                 "lng": -116.978965
               },
               {
+                "cr": "50GDT",
+                "name": "Santa Barbara TIJ",
+                "lat": 32.505506,
+                "lng": -116.985094
+              },
+              {
                 "cr": "50YPX",
                 "name": "San Pedro TIJ",
                 "lat": 32.500531,
                 "lng": -116.969814
-              },
-              {
-                "cr": "50XEE",
-                "name": "Corregidora TIJ",
-                "lat": 32.497581,
-                "lng": -116.990418
-              },
-              {
-                "cr": "50RUX",
-                "name": "Chapultepec TIJ",
-                "lat": 32.505041,
-                "lng": -117.007306
-              },
-              {
-                "cr": "50TAY",
-                "name": "Otay TIJ",
-                "lat": 32.522981,
-                "lng": -116.97216
               },
               {
                 "cr": "50SYD",
@@ -152,23 +116,23 @@
                 "lng": -116.900222
               },
               {
-                "cr": "50LWW",
-                "name": "Silva TIJ",
-                "lat": 32.545668,
-                "lng": -116.909732
-              },
-              {
                 "cr": "504YH",
                 "name": "Parker TIJ",
                 "lat": 32.541542,
                 "lng": -116.918561
+              },
+              {
+                "cr": "50XEI",
+                "name": "Campo Nuevo TIJ",
+                "lat": 32.527824,
+                "lng": -117.006062
               }
             ],
-            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.539793,-117.011349&destination=32.541542,-116.918561&waypoints=32.534603,-117.009537|32.527824,-117.006062|32.539071,-116.998815|32.521719,-116.985969|32.519521,-116.982462|32.514596,-116.983546|32.512299,-116.986826|32.513755,-116.987638&travelmode=driving"
+            "mapsUrl": "https://www.google.com/maps/dir/?api=1&origin=32.505041,-117.007306&destination=32.527824,-117.006062&waypoints=32.512299,-116.986826|32.514596,-116.983546|32.519521,-116.982462|32.521719,-116.985969|32.522981,-116.97216|32.505946,-116.978965|32.505506,-116.985094|32.500531,-116.969814&travelmode=driving"
           }
         ]
       }
     ],
-    "generatedAt": "2026-04-15T20:08:32.915Z"
+    "generatedAt": "2026-04-17T19:30:37.013Z"
   }
 }
